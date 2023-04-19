@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Lora:wght@400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <symbol id="icon__human">
+      <path d="M0 0h48v48H0z" style="stroke:none;fill:none"/>
+      <circle cx="24" cy="13" r="7" style="stroke-miterlimit:10;stroke-width:2px;fill:none"/>
+      <path d="M10 44v-6a10 10 0 0 1 10-10h8a10 10 0 0 1 10 10v6" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;fill:none"/>
+    </symbol>
+    <symbol id="icon__cart">
+      <defs>
+        <style>.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}</style>
+      </defs>
+      <path id="Rectangle" d="M0 0h48v48H0z" style="stroke:none;fill:none"/>
+      <g id="icon_data">
+        <path d="M12 16.72h28.68l-2.04 9.89L22 31M4.69 6.46H9l5.87 23.99-2.28 4.73" class="cls-2"/>
+        <circle cx="9" cy="38" r="4" class="cls-2"/>
+        <circle cx="37" cy="38" r="4" class="cls-2"/>
+      </g>
+    </symbol>
+    <symbol id="icon__serch">
+      <defs>
+        <style>.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}</style>
+      </defs>
+      <path id="Rectangle" d="M0 0h48v48H0z" style="stroke:none;fill:none"/>
+      <g id="icon_data">
+        <path d="M25.66 35.52A14.24 14.24 0 0 1 22 36a14 14 0 1 1 9.9-4.1M40 40l-8.1-8.1" class="cls-2"/>
+      </g>
+    </symbol>
+    <symbol id="icon__arrow__r" role="img" aria-labelledby="arrowRightIconTitle" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+      <path d="M15 18l6-6-6-6"/>
+      <path d="M3 12h17"/>
+      <path stroke-linecap="round" d="M21 12h-1"/>
+    </symbol>
+    <symbol id="icon__arrow__l" role="img" aria-labelledby="arrowLeftIconTitle" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+      <path d="M9 6l-6 6 6 6"/>
+      <path d="M21 12H4"/>
+      <path stroke-linecap="round" d="M3 12h1"/>
+    </symbol>
+    <symbol id="icon__arrow__up" role="img" aria-labelledby="arrowUpIconTitle" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none">
+      <path d="M18 9l-6-6-6 6"/>
+      <path d="M12 21V4"/>
+      <path stroke-linecap="round" d="M12 3v1"/>
+    </symbol>
+    <symbol id="icon__ins" xml:space="preserve">
+      <path d="M363.024 0H148.976C69.063 0 4.281 64.782 4.281 144.695v222.61C4.281 447.218 69.063 512 148.976 512h214.047c79.914 0 144.695-64.782 144.695-144.695v-222.61C507.719 64.782 442.937 0 363.024 0zM55.652 144.695c0-51.461 41.863-93.324 93.324-93.324h214.047c51.461 0 93.324 41.863 93.324 93.324v222.61c0 51.461-41.863 93.324-93.324 93.324H148.976c-51.461 0-93.324-41.863-93.324-93.324v-222.61z"/>
+      <path d="M256 387.851c72.703 0 131.852-59.148 131.852-131.851S328.703 124.145 256 124.145c-72.702 0-131.851 59.152-131.851 131.855S183.297 387.851 256 387.851zm0-222.609c50.043 0 90.754 40.714 90.754 90.758S306.043 346.758 256 346.758c-50.042 0-90.754-40.714-90.754-90.758s40.711-90.758 90.754-90.758z"/>
+      <ellipse cx="391.707" cy="120.296" rx="29.539" ry="29.541"/>
+    </symbol>
+    <symbol id="icon__fb" xml:space="preserve">
+      <path d="M483.758 0H28.242C12.641 0 0 12.637 0 28.238V483.68C0 499.359 12.641 512 28.242 512h219.679V340.957h-74.402v-86.16h74.402v-63.598c0-13.801 1.578-26.422 4.57-37.824.094-.344.215-.66.309-1a117.76 117.76 0 0 1 2.953-9.356c.871-2.367 1.871-4.633 2.879-6.886.418-.942.785-1.93 1.226-2.851a101.02 101.02 0 0 1 4.762-8.734c.082-.137.153-.282.238-.418a94.52 94.52 0 0 1 12.454-16.058c.109-.114.21-.242.32-.355 2.012-2.063 4.164-3.981 6.363-5.848.492-.418.95-.875 1.45-1.282 1.734-1.414 3.594-2.691 5.438-3.984 1.098-.766 2.148-1.586 3.281-2.305 1.195-.766 2.477-1.422 3.715-2.141 1.926-1.106 3.824-2.242 5.843-3.222.348-.176.727-.309 1.078-.481 15.566-7.359 33.754-11.175 53.918-11.175 31.524 0 58.641 2.402 66.481 3.441v77.039h-45.598c-35.762 0-42.722 17.039-42.722 42v55.039h76.457l8.902.02-11.118 86.14h-74.241V512h146.878C499.359 512 512 499.359 512 483.68V28.238C512 12.637 499.359 0 483.758 0z"/>
+    </symbol>
+  </svg>
+  <header id="header" class="header">
+    <a href="#" class="logo">
+      <img src="./image/logo.png" alt="牛兵衛">
+    </a>
+    <div id="navbar" class="navbar">
+      <ul class="navbar__menu">
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 44 44" class="icon__content"><use xlink:href="#icon__human"></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 44 44" class="icon__content"><use xlink:href="#icon__cart"></svg>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 44 44" class="icon__content"><use xlink:href="#icon__serch"></svg>
+          </a>
+        </li>
+      </ul>
+      <button class="humburger">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="top-menu">
+      <ul>
+        <li>
+          <a href="#">メニュー</a>
+        </li>
+        <li>
+          <a href="#">商品一覧</a>
+        </li>
+        <li>
+          <a href="#">牛兵衛に<br class="sp">ついて</a>
+        </li>
+        <li>
+          <a href="#">ギフトを贈る</a>
+        </li>
+        <li>
+          <a href="#">お知らせ</a>
+        </li>
+      </ul>
+    </div>
+    <nav id="global-nav" class="global-nav">
+      <div class="global-nav__inner">
+        <div class="center-item">
+          <ul class="center-item__link">
+            <li>
+              <a href="#">ご利用ガイド</a>
+            </li>
+            <li>
+              <a href="#">ご利用規約</a>
+            </li>
+            <li>
+              <a href="#">特定商取引法に基づく表記</a>
+            </li>
+            <li>
+              <a href="#">プライバシーポリシー</a>
+            </li>
+            <li>
+              <a href="#">お問い合わせ</a>
+            </li>
+          </ul>
+          <ul class="center-item__nav">
+            <li>
+              <a href="#">商品一覧</a>
+            </li>
+            <li>
+              <a href="#">牛兵衛について</a>
+            </li>
+            <li>
+              <a href="#">ギフトを贈る</a>
+            </li>
+            <li>
+              <a href="#">お知らせ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-item">
+          <div class="left-item">
+            <p class="left-item__title">ご予約はこちら</p>
+            <a href="tel:xxxx-xx-xxxx" class="tel">
+              <span>TEL</span>
+              0287-63-5571
+            </a>
+            <p class="left-item__text">
+              営業時間：11:30～14:00(13:40) / 17:00～22:30<br>
+              〒325-0026 那須塩原市上厚崎720-4&emsp;FAX：0287-63-5571
+            </p>
+          </div>
+          <div class="right-item">
+            <ul class="right-item__mypage">
+              <li>
+                <a href="#" class="icon">
+                  <div class="icon__content">
+                    <svg viewBox="0 0 44 44"><use xlink:href="#icon__human"></use></svg>
+                  </div>
+                  マイページ
+                </a>
+              </li>
+              <li>
+                <a href="#" class="icon">
+                  <div class="icon__content">
+                    <svg viewBox="0 0 44 44"><use xlink:href="#icon__cart"></use></svg>
+                  </div>
+                  カート
+                </a>
+              </li>
+            </ul>
+            <ul class="right-item__sns">
+              <li>
+                <a href="#" class="icon">
+                  <div class="icon__content">
+                    <svg viewBox="0 0 512 512"><use xlink:href="#icon__ins"></use></svg>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="icon">
+                  <div class="icon__content">
+                    <svg viewBox="0 0 512 512"><use xlink:href="#icon__fb"></use></svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <p class="right-item__copyright">&copy; gyubei All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top">
+      <h1 class="main-title"><!-- 後で！！！一文字ずつにする！！！ --->
+        <span class="main-title__en">JUST MEAT</span>
+        <span class="main-title__ja">匠の味をお店でも、ご家庭でも。</span>
+      </h1>
+      <div class="top-img1">
+        <img src="./image/top1-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      </div>
+      <div class="top-img2">
+        <img src="./image/top2-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      </div>
+      <div class="top-img3">
+        <img src="./image/top3-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      </div>
+      <div class="scroll">
+        <p>SCROLL</p>
+        <span></span>
+      </div>
+    </section>
+
+    <section id="about" class="about section-area pict-zoom">
+      <div class="about__inner">
+        <h2 class="sec-title">
+          <span class="sec-title__en">ABOUT US</span>
+          <span class="sec-title__ja">厳選した素材を、<br>
+            肉の匠が<br>
+            提供する焼肉店
+          </span>
+        </h2>
+        <div class="text">
+          <p>精肉店から始まった当店は、こだわりの強い店主自ら目利きした良質なお肉を、もっと多くの人に味わって頂きたいと思い、焼肉牛兵衛を立ち上げました。</p>
+          <p>「地産地消」にこだわり、日本国内でも大変希少価値のある、<br>
+            とちぎ和牛、那須和牛を肉のプロが厳選して提供させていただいております。</p>
+        </div>
+      </div>
+      <a href="#" class="about__link link">
+        <div class="text">
+          <span class="icon">
+            <svg viewBox="-8 -4 40 40" class="icon__content"><use xlink:href="#icon__arrow__r"></svg>
+          </span>
+          <p>牛兵衛について</p>
+        </div>
+        <div class="item__img">
+          <img src="./image/about.png" alt="牛兵衛について">
+        </div>
+      </a>
+    </section>
+
+    <section id="gift" class="gift section-area b-white-img pict-zoom">
+      <div class="gift__top">
+        <h2 class="sec-title">
+          <span class="sec-title__en">GIFT</span>
+          <span class="sec-title__ja">ギフトにおすすめ</span>
+        </h2>
+        <div class="container">
+          <div class="slide-items">
+            <div class="item">
+              <a class="link" href="#">
+                <div class="item__img">
+                  <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                </div>
+                <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                <p class="item__price">¥4,000
+                  <span class="tax">(税込)</span>
+                </p>
+                <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                <div class="btn">
+                  <p>ご購入はこちら</p>
+                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a class="link" href="#">
+                <div class="item__img">
+                  <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
+                </div>
+                <p class="item__menu">和牛すき焼き肉セット（700グラム）</p>
+                <p class="item__price">¥10,000
+                  <span class="tax">(税込)</span>
+                </p>
+                <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
+                <div class="btn">
+                  <p>ご購入はこちら</p>
+                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a class="link" href="#">
+                <div class="item__img">
+                  <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
+                </div>
+                <p class="item__menu">牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ</p>
+                <p class="item__price">¥4,500
+                  <span class="tax">(税込)</span>
+                </p>
+                <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                <div class="btn">
+                  <p>ご購入はこちら</p>
+                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a class="link" href="#">
+                <div class="item__img">
+                  <img src="./image/products_pack_don_nikomi.png" alt="牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ">
+                </div>
+                <p class="item__menu">牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ</p>
+                <p class="item__price">¥4,500
+                  <span class="tax">(税込)</span>
+                </p>
+                <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                <div class="btn">
+                  <p>ご購入はこちら</p>
+                  <div class="icon">
+                    <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="item">
+              <a class="link" href="#">
+                <div class="item__img">
+                  <img src="./image/products_roast_soboro.png" alt="手作り和牛ローストビーフ(300グラム×２本)と和牛そぼろのセット（200グラム）">
+                </div>
+                <p class="item__menu">手作り和牛ローストビーフ(300グラム×２本)と和牛そぼろのセット（200グラム）</p>
+                <p class="item__price">¥7,000
+                  <span class="tax">(税込)</span>
+                </p>
+                <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。和牛そぼろはご飯のお供に最適です。</p>
+                <div class="btn">
+                  <p>ご購入はこちら</p>
+                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="scroll-ctrl">
+            <!--横スクロールのバーいるよ～～-->
+            <div class="side-scroll"></div>
+            <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
+            <button id="prev" class="scroll-ctrl__btn">
+              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__l"></use></svg>
+            </button>
+            <button id="next" class="scroll-ctrl__btn">
+              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+            </button>
+            <a href="#" class="link">
+              <p class="text">ギフト一覧を見る</p>
+              <span class="icon">
+                <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="giftbox">
+        <div class="giftbox__item">
+          <div class="item__img">
+            <img src="./image/gift1.png" alt="giftbox">
+          </div>
+          <div class="text">
+            <p class="text__title">高級感のある牛兵衞専用BOX</p>
+            <p class="text__exp">ギフト用の箱に入れて速達でお届けいたします。</p>
+          </div>
+        </div>
+        <div class="giftbox__item">
+          <div class="item__img">
+            <img src="./image/gift2.png" alt="giftbox">
+          </div>
+          <div class="text">
+            <p class="text__title">ギフト対応・のし入れ 無料</p>
+            <p class="text__exp">お歳暮、お中元、御祝い、御礼、快気祝い、寿、内祝い ect・・・。</p>
+            <p class="text__exp">様々な種類に対応しております。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recommendation" class="section-area b-white-img pict-zoom">
+      <h2 class="sec-title">
+        <span class="sec-title__en">RECOMMENDATION</span>
+        <span class="sec-title__ja">こんなシーンにおすすめ</span>
+      </h2>
+      <div class="contents">
+        <a class="contents__item link" href="#">
+          <div class="text-area">
+            <div class="text-area__text">
+              <h3>いつもの料理に</h3>
+              <p>
+                晩ごはんの献立にプラスしたり、<br>
+                晩酌のお供としても大人気です。<br>
+                いつも頑張っている自分へのご褒美に<br>
+                お家でカジュアルに牛兵衞の“味”を楽しみませんか？
+              </p>
+              <div class="text-area__link">
+                <span class="text">お手軽に楽しめる商品はこちら</span>
+                <span class="icon">
+                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item__img">
+            <img src="./image/scene1.png" alt="picture">
+          </div>
+        </a>
+        <a class="contents__item link" href="#">
+          <div class="text-area">
+            <div class="text-area__text">
+              <h3>お店の味をご自宅で</h3>
+              <p>
+                牛兵衛の焼肉セットを<br>
+                ご友人やご家族でお楽しみ頂けます。
+              </p>
+              <div class="text-area__link">
+                <div class="text">お家で楽しめる焼肉セットはこちら</div>
+                <span class="icon">
+                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item__img">
+            <img src="./image/scene2.png" alt="picture">
+          </div>
+        </a>
+        <a class="contents__item link" href="#">
+          <div class="text-area">
+            <div class="text-area__text">
+              <h3>大切な人・お世話になった人へのギフトとして</h3>
+              <p>
+                季節のご挨拶、お祝い、お礼、お返しの贈り物にぴったり。<br>
+                牛兵衞専用のギフトBOXに入れてお送りいたします。
+              </p>
+              <div class="text-area__link">
+                <div class="text">贈り物に喜ばれる牛兵衞のギフト一覧はこちら</div>
+                <span class="icon">
+                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="item__img">
+            <img src="./image/scene3.png" alt="picture">
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="products" class="products section-area b-white-img pict-zoom">
+      <div class="products__wrap">
+        <h2 class="sec-title sec-title-c">
+          <span class="sec-title__ja">取扱商品</span>
+          <span class="sec-title__en sec-title-c__en">PRODUCTS HANDLED</span>
+        </h2>
+        <div class="products-area">
+          <div class="products__inner">
+            <div class="side-bar">
+              <dl>
+                <dt>ラインナップ</dt>
+                <dd>
+                  <button class="is-select">
+                    ALL
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    牛丼・生姜焼き丼
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    ハンバーグ
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    ギフト
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    牛肉
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    豚肉
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    焼肉セット
+                  </button>
+                </dd>
+                <dd>
+                  <button>
+                    肉加工品
+                  </button>
+                </dd>
+              </dl>
+            </div>
+
+            <div class="lineup">
+              <div class="lineup__items lineup__all is-select">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
+                    </div>
+                    <p class="item__menu">和牛すき焼き肉セット（700グラム）</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku.png" alt="特選　季節の焼肉セット">
+                    </div>
+                    <p class="item__menu">特選　季節の焼肉セット</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_b.png" alt="焼肉セットB">
+                    </div>
+                    <p class="item__menu">焼肉セットB</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_a.png" alt="焼肉セットA">
+                    </div>
+                    <p class="item__menu">焼肉セットA</p>
+                    <p class="item__price">¥7,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_roast.png" alt="手作り和牛ローストビーフ(300グラム×３本)">
+                    </div>
+                    <p class="item__menu">手作り和牛ローストビーフ(300グラム×３本)</p>
+                    <p class="item__price">¥9,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__don">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_don.png" alt="牛丼の具(10個入り)">
+                    </div>
+                    <p class="item__menu">牛丼の具(10個入り)</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi.png" alt="牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__barg">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargnikomi.png" alt="煮込みハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">煮込みハンバーグ(10個入り)</p>
+                    <p class="item__price">¥5,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargyaki.png" alt="焼きハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">焼きハンバーグ(10個入り)</p>
+                    <p class="item__price">¥4,300
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__gift">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
+                    </div>
+                    <p class="item__menu">和牛すき焼き肉セット（700グラム）</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargnikomi.png" alt="牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_roast_soboro.png" alt="手作り和牛ローストビーフ(300グラム×２本)と和牛そぼろのセット（200グラム）">
+                    </div>
+                    <p class="item__menu">手作り和牛ローストビーフ(300グラム×２本)と和牛そぼろのセット（200グラム）</p>
+                    <p class="item__price">¥7,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。和牛そぼろはご飯のお供に最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyakigentei.png" alt="数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）">
+                    </div>
+                    <p class="item__menu">数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__gyuniku">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_don.png" alt="牛丼の具(10個入り)">
+                    </div>
+                    <p class="item__menu">牛丼の具(10個入り)</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargnikomi.png" alt="煮込みハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">煮込みハンバーグ(10個入り)</p>
+                    <p class="item__price">¥5,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
+                    </div>
+                    <p class="item__menu">和牛すき焼き肉セット（700グラム）</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargyaki.png" alt="焼きハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">焼きハンバーグ(10個入り)</p>
+                    <p class="item__price">¥4,300
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyakigentei.png" alt="数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）">
+                    </div>
+                    <p class="item__menu">数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__butaniku">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_a.png" alt="焼肉セットA">
+                    </div>
+                    <p class="item__menu">焼肉セットA</p>
+                    <p class="item__price">¥7,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_b.png" alt="焼肉セットB">
+                    </div>
+                    <p class="item__menu">焼肉セットB</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__yakiniku">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
+                    </div>
+                    <p class="item__menu">和牛すき焼き肉セット（700グラム）</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyakigentei.png" alt="数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）">
+                    </div>
+                    <p class="item__menu">数量限定　和牛すき焼き肉(赤身と霜降り)の紅白セット（700グラム）</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku.png" alt="特選　季節の焼肉セット">
+                    </div>
+                    <p class="item__menu">特選　季節の焼肉セット</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_sukiyaki_roast.png" alt="和牛すき焼き肉(600グラム)と手作り和牛ローストビーフ(300グラム)">
+                    </div>
+                    <p class="item__menu">和牛すき焼き肉(600グラム)と手作り和牛ローストビーフ(300グラム)</p>
+                    <p class="item__price">¥12,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉と和牛のローストビーフのセットです。どちらも和牛の旨味を堪能頂ける商品となっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_a.png" alt="焼肉セットA">
+                    </div>
+                    <p class="item__menu">焼肉セットA</p>
+                    <p class="item__price">¥7,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_yakiniku_b.png" alt="焼肉セットB">
+                    </div>
+                    <p class="item__menu">焼肉セットB</p>
+                    <p class="item__price">¥10,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="lineup__items lineup__kakou">
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_don.png" alt="牛丼の具(10個入り)">
+                    </div>
+                    <p class="item__menu">牛丼の具(10個入り)</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
+                    </div>
+                    <p class="item__menu">牛丼の具（５個）と生姜焼き丼の具（５個）のセット</p>
+                    <p class="item__price">¥4,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargnikomi.png" alt="煮込みハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">煮込みハンバーグ(10個入り)</p>
+                    <p class="item__price">¥5,000
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi.png" alt="牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
+                    </div>
+                    <p class="item__menu">牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ</p>
+                    <p class="item__price">¥4,500
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a class="link" href="#">
+                    <div class="item__img">
+                      <img src="./image/products_bargyaki.png" alt="焼きハンバーグ(10個入り)">
+                    </div>
+                    <p class="item__menu">焼きハンバーグ(10個入り)</p>
+                    <p class="item__price">¥4,300
+                      <span class="tax">(税込)</span>
+                    </p>
+                    <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+                    <div class="btn">
+                      <p>ご購入はこちら</p>
+                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__bottom bottom-link">
+          <a class="link" href="#">
+            <p class="text">商品一覧を見る</p>
+            <span class="icon">
+              <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ranking" class="ranking section-area b-white-img pict-zoom">
+      <div class="ranking__inner">
+        <h2 class="sec-title sec-title-c">
+          <span class="sec-title__ja">
+            人気商品<br>
+            ランキング
+          </span>
+          <span class="sec-title__en sec-title-c__en">RANKING</span>
+        </h2>
+        <div class="ranking__items">
+          <div class="item">
+            <a href="#" class="item__link link">
+              <div class="item__rank rank-1">
+                1
+              </div>
+              <div class="item__img">
+                <img src="./image/products_don.png" alt="牛丼の具(10個入り)">
+              </div>
+              <p class="item__menu">牛丼の具(10個入り)</p>
+              <p class="item__price">¥4,000
+                <span class="tax">(税込)</span>
+              </p>
+              <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
+              <div class="btn">
+                <p>ご購入はこちら</p>
+                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="item__link link">
+              <div class="item__rank rank-2">
+                2
+              </div>
+              <div class="item__img">
+                <img src="./image/products_yakiniku.png" alt="特選　季節の焼肉セット">
+              </div>
+              <p class="item__menu">特選　季節の焼肉セット</p>
+              <p class="item__price">¥12,000
+                <span class="tax">(税込)</span>
+              </p>
+              <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
+              <div class="btn">
+                <p>ご購入はこちら</p>
+                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#" class="item__link link">
+              <div class="item__rank rank-3">
+                3
+              </div>
+              <div class="item__img">
+                <img src="./image/products_bargnikomi.png" alt="煮込みハンバーグ(10個入り)">
+              </div>
+              <p class="item__menu">煮込みハンバーグ(10個入り)</p>
+              <p class="item__price">¥5,000
+                <span class="tax">(税込)</span>
+              </p>
+              <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
+              <div class="btn">
+                <p>ご購入はこちら</p>
+                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="voice" class="section-area voice b-white-img">
+      <div class="voice__inner">
+        <h2 class="sec-title">
+          <span class="sec-title__en">VOICE</span>
+          <span class="sec-title__ja">お客様の声</span>
+        </h2>
+        <div class="container">
+          <div class="slide-items">
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice1.png" alt="定期的に食べたくなるハンバーグ">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">定期的に食べたくなるハンバーグ</p>
+                  <p class="comment">地元に愛されてる人気の焼肉屋。開店直後でも車がほぼ埋まっていて予約も受け付けてくれているので運が良くないと入れない。。もちろん焼き肉が一番だけど定期的に食べたくなるのがハンバーグ！最近では珍しいタイプの懐かしさを感じる煮込みハンバーグは舌でほぐせるくらいほろほろのお肉。上質なお肉を使ってるから出来るんだろう味は家庭では再現できない満足感があります。</p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">I.S様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>煮込みハンバーグ</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice2.png" alt="自宅用に購入">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">自宅用に購入</p>
+                  <p class="comment">
+                    家族みんなが大好きな牛兵衞の牛丼！必ず冷蔵庫にストックしてあります♪<br>
+                    ご飯なに食べようと悩んだ時にすごく便利。甘辛い味付けは子供から大人まで大好きな味だと思います！
+                  </p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">さちふと様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>牛丼の具</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice3.png" alt="自分へのご褒美に">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">自分へのご褒美に</p>
+                  <p class="comment">こんなローストビーフは初めて！肉肉しさと噛むたびに口の中に広がる和牛の旨味!!自分で好きな厚さに切れるのでお酒のおつまみにしたり、卵の黄身を落としてローストビーフ丼を作ったり…楽しみ方がいっぱい！買ってよかったです♪</p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">ぽぽ様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>手作り和牛ローストビーフ</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice4.png" alt="友達とのBBQ用に購入">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">友達とのBBQ用に購入</p>
+                  <p class="comment">友達みんなで各自お肉を持ち合わせてBBQすることになり、わたしはこちらの商品を購入。圧倒的な大きさとインパクトでBBQ前から盛り上がりました（笑）!!自分で好きな厚さに切れるのでお酒のおつまみにしたり、卵の黄身を落としてローストビーフ丼を作ったり…楽しみ方がいっぱい！買ってよかったです♪</p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">yume様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>ブロック肉（豚肉）</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice5.png" alt="いつもお世話になっている友人へ">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">いつもお世話になっている友人へ</p>
+                  <p class="comment">いつもお世話になっている友人へ贈りました。全部のお肉が柔らかくて口に含んだ瞬間とても幸せになった！と連絡が届きました。とても喜んでもらえて贈るこちらも嬉しくなりました。次回は自宅用で購入したいと思います。</p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">S.T様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>特選　焼肉セットC</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item__img">
+                <img src="./image/voice6.png" alt="義実家への御中元として購入">
+              </div>
+              <div class="item__text">
+                <div class="item__top">
+                  <p class="title">義実家への御中元として購入</p>
+                  <p class="comment">口の中でとろけるお肉と白米の相性が抜群らしく、とても喜んでくれます。</p>
+                </div>
+                <div class="item__user">
+                  <p class="user-name">S.K様</p>
+                  <dl class="user-products">
+                    <dt>購入した商品</dt>
+                    <dd>焼きハンバーグ</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-ctrl">
+            <!--横スクロールのバーいるよ～～-->
+            <div class="side-scroll"></div>
+            <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
+            <button id="prev" class="scroll-ctrl__btn">
+              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__l"></use></svg>
+            </button>
+            <button id="next" class="scroll-ctrl__btn">
+              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="news section-area b-white-img pict-zoom">
+      <h2 class="sec-title sec-title-c">
+        <span class="sec-title__ja">お知らせ</span>
+        <span class="sec-title__en sec-title-c__en">NEWS</span>
+      </h2>
+      <div class="news__menu">
+        <ul>
+          <li><button class="is-select">すべて</button></li>
+          <li><button>お知らせ</button></li>
+        </ul>
+      </div>
+      <div class="news__items">
+        <div class="item">
+          <a href="#" class="item__link link">
+            <div class="item__img">
+              <img src="./image/news.png" alt="オンラインショップオープンのお知らせ">
+            </div>
+            <div class="item__text">
+              <p class="item__date">
+                <date class="date">2023.01.20</date>
+                <span>お知らせ</span>
+              </p>
+              <p class="item__title">オンラインショップオープンのお知らせ</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!--実装省略-->
+      <div class="news__bottom bottom-link">
+        <a class="link" href="#">
+          <p class="text">お知らせ一覧を見る</p>
+          <span class="icon">
+            <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="faq section-area">
+      <div class="faq__inner">
+        <h2 class="sec-title">
+          <span class="sec-title__en">FAQ</span>
+          <span class="sec-title__ja">よくある質問</span>
+        </h2>
+        <div class="faq__area">
+          <ul class="faq__lists">
+            <li class="list">
+              <div class="faq__title">
+                <p class="text">蝶結びと結び切りの違いについて</p>
+                <div class="plus-icon">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="faq__answer">
+                <p>
+                  蝶結びは、結び目が何度でも結び直せる事から、何度繰り返してもよいお祝い事やお礼などに用います。<br>
+                  結び切りは、結び目が簡単にほどけない事から、一度きりであってほしいお祝い事、結婚などに用います。
+                </p>
+              </div>
+            </li>
+            <li class="list">
+              <div class="faq__title">
+                <p class="text">熨斗の種類・名入りについて</p>
+                <div class="plus-icon">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="faq__answer">
+                <p>
+                  基本的には熨斗の名入りサービスは承っておりません。<br>
+                  必要な方はお手数ですが、商品を注文される際にショッピングカート内の“備考欄”にその趣旨と名入りする「お名前」を記入してください。<br>
+                  選択項目以外の熨斗でも対応しております。ご希望の方は名入りサービスと同様、“備考欄”にご希望の「熨斗の種類」を記入ください。
+                </p>
+              </div>
+            </li>
+            <li class="list">
+              <div class="faq__title">
+                <p class="text">贈答用のご注文について</p>
+                <div class="plus-icon">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="faq__answer">
+                <p>
+                  「配送先住所」の設定にて送り主様のお名前やご住所等をご記入ください。<br>
+                  また、お届け先様と送り主様が異なる場合は、「違う請求先住所を使う」より送り主様のお名前やご住所等をご記入ください。
+                </p>
+              </div>
+            </li>
+            <li class="list">
+              <div class="faq__title">
+                <p class="text">商品の状態について</p>
+                <div class="plus-icon">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="faq__answer">
+                <p>商品は全て冷凍となります。解凍後は早めにお召し上がりください。</p>
+              </div>
+            </li>
+            <li class="list">
+              <div class="faq__title">
+                <p class="text">年末年始期間の営業について</p>
+                <div class="plus-icon">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="faq__answer">
+                <p>
+                  12月25日AM11時ご注文受付分までが年内出荷の対応が可能です。12月25日AM11時以降のご注文分は年明け6日頃からの順次出荷となります。年末年始は配送各社の配送量増加による混雑に伴い、やむをえず商品のお届けに遅れが生じる可能性がございます。<br>
+                  ※上記の締切日時までにご注文をいただいても、お届け先情報や決済方法に不備があったり、ご注文内容の変更など確認作業が必要となる場合は、出荷予定日に間に合わない場合がございます。あらかじめご了承ください。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="instagram" class="instagram section-area b-white-img">
+      <h2 class="sec-title">Instagram</h2>
+      <div class="container">
+        <div class="item">
+          <div class="item__img">
+            <img src="./image/instagram1.png" alt="か">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram2.png" alt="い">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram3.png" alt="て">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram4.png" alt="ん">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram5.png" alt="や">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram6.png" alt="き">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram7.png" alt="に">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram8.png" alt="く">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram9.png" alt="だ">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram10.png" alt="びっくり">
+          </div>
+        </div>
+        <div class="item">
+          <div class="item__img">
+            <img src="./image/instagram1.png" alt="か">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram2.png" alt="い">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram3.png" alt="て">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram4.png" alt="ん">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram5.png" alt="や">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram6.png" alt="き">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram7.png" alt="に">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram8.png" alt="く">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram9.png" alt="だ">
+          </div>
+          <div class="item__img">
+            <img src="./image/instagram10.png" alt="びっくり">
+          </div>
+        </div>
+      </div>
+      <div class="instagram__bottom bottom-link">
+        <a class="link" href="#">
+          <p class="text">インスタグラムを見る</p>
+          <span class="icon">
+            <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+
+      <div class="footer__list">
+        <a class="footer__to-top" href="#">
+          <div class="icon">
+            <svg viewBox="-18.25 -24 60 60" class="icon__content"><use xlink:href="#icon__arrow__up"></use></svg>
+          </div>
+        </a>
+        <ul class="footer__nav">
+          <li>
+            <a href="#">商品一覧</a>
+          </li>
+          <li>
+            <a href="#">牛兵衛について</a>
+          </li>
+          <li>
+            <a href="#">ギフトを贈る</a>
+          </li>
+          <li>
+            <a href="#">お知らせ</a>
+          </li>
+        </ul>
+        <ul class="footer__link">
+          <li>
+            <a href="#">ご利用ガイド</a>
+          </li>
+          <li>
+            <a href="#">ご利用規約</a>
+          </li>
+          <li>
+            <a href="#">特定商取引法に基づく表記</a>
+          </li>
+          <li>
+            <a href="#">プライバシーポリシー</a>
+          </li>
+          <li>
+            <a href="#">お問い合わせ</a>
+          </li>
+        </ul>
+        <a class="footer__logo" href="#">
+          <img src="./image/logo_white.png" alt="牛兵衛">
+          和牛焼肉　牛兵衛
+        </a>
+      </div>
+
+      <div class="footer__contact">
+        <div class="mailmagazine item">
+          <p class="item__title">メールマガジン</p>
+          <div class="item__right">
+            <p class="item__text">
+              お得なキャンペーンや<br>
+              クーポン情報をお届けいたします。
+            </p>
+            <div class="form-section">
+              <input type="email" class="input-area" id="email" autocomplete="email" placeholder="メールアドレス">
+              <button class="email-btn">登録する</button>
+            </div>
+          </div>
+        </div>
+        <div class="address item">
+          <p class="item__title">ご予約はこちら</p>
+          <div class="item__right">
+            <a href="tel:xxxx-xx-xxxx" class="tel">
+              <span>TEL</span>
+              0287-63-5571
+            </a>
+            <p class="item__text">
+              営業時間：11:30～14:00(13:40) / 17:00～22:30<br>
+              〒325-0026 那須塩原市上厚崎720-4<br>
+              FAX：0287-63-5571
+            </p>
+          </div>
+        </div>
+      </div>
+      <ul class="footer__mypage">
+        <li>
+          <a href="#" class="icon">
+            <div class="icon__content">
+              <svg viewBox="0 0 44 44"><use xlink:href="#icon__human"></use></svg>
+            </div>
+            マイページ
+          </a>
+        </li>
+        <li>
+          <a href="#" class="icon">
+            <div class="icon__content">
+              <svg viewBox="0 0 44 44"><use xlink:href="#icon__cart"></use></svg>
+            </div>
+            カート
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__sns">
+        <li>
+          <a href="#" class="icon">
+            <div class="icon__content">
+              <svg viewBox="0 0 512 512"><use xlink:href="#icon__ins"></use></svg>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="icon">
+            <div class="icon__content">
+              <svg viewBox="0 0 512 512"><use xlink:href="#icon__fb"></use></svg>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copyright">&copy; gyubei All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
