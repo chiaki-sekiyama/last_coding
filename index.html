@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Lora:wght@400;500&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
     <symbol id="icon__human">
       <path d="M0 0h48v48H0z" style="stroke:none;fill:none"/>
       <circle cx="24" cy="13" r="7" style="stroke-miterlimit:10;stroke-width:2px;fill:none"/>
@@ -62,11 +63,25 @@
     <symbol id="icon__fb" xml:space="preserve">
       <path d="M483.758 0H28.242C12.641 0 0 12.637 0 28.238V483.68C0 499.359 12.641 512 28.242 512h219.679V340.957h-74.402v-86.16h74.402v-63.598c0-13.801 1.578-26.422 4.57-37.824.094-.344.215-.66.309-1a117.76 117.76 0 0 1 2.953-9.356c.871-2.367 1.871-4.633 2.879-6.886.418-.942.785-1.93 1.226-2.851a101.02 101.02 0 0 1 4.762-8.734c.082-.137.153-.282.238-.418a94.52 94.52 0 0 1 12.454-16.058c.109-.114.21-.242.32-.355 2.012-2.063 4.164-3.981 6.363-5.848.492-.418.95-.875 1.45-1.282 1.734-1.414 3.594-2.691 5.438-3.984 1.098-.766 2.148-1.586 3.281-2.305 1.195-.766 2.477-1.422 3.715-2.141 1.926-1.106 3.824-2.242 5.843-3.222.348-.176.727-.309 1.078-.481 15.566-7.359 33.754-11.175 53.918-11.175 31.524 0 58.641 2.402 66.481 3.441v77.039h-45.598c-35.762 0-42.722 17.039-42.722 42v55.039h76.457l8.902.02-11.118 86.14h-74.241V512h146.878C499.359 512 512 499.359 512 483.68V28.238C512 12.637 499.359 0 483.758 0z"/>
     </symbol>
+    <symbol id="icon__home" xml:space="preserve"><path d="m511.867 284.242.133-.094-98.367-98.574V76.094h-54.844v32.027l-.113 22.426L256.183 27.848l-.105-.102-.11-.114L40.465 243.598.094 284.019l.023.016-.117.114 50.809 34.515 1.218-1.218.782-.649v167.57h406.387v-98.398l.11-69.262 1.961 1.957 42.649-29.012 7.976-5.386-.025-.024zM255.969 112.816 424.68 282.012v167.839H225.457V284.149h-78.074v165.702H87.324V282.012l168.481-169.031.164-.165z"/><path d="M286.004 374.766v.16h80.832v-90.774h-80.832v90.059l-.004.555h.004zm20.707-20.551v-49.356h39.418v49.356h-39.418z"/></symbol>
+    <symbol id="icon__meat" xml:space="preserve"><path d="M442.801 133.424c-.066-.133-.203-.27-.34-.406-44.43-55.113-116.011-95.054-215.418-95.054-28.645 0-66.34 2.043-103.969 17.488-22.59 9.321-41.91 22.383-57.766 38.989-30.891 27.011-47.153 60.965-55.59 92.125C2.305 213.849 0 233.608 0 264.224c0 54.324 11.762 95.574 43.195 127.282 33.817 34.086 84.645 49.874 139.282 43.203 11.5-1.36 21.84-3.196 30.957-4.762 28.168-4.898 46.813-8.098 82.262 1.294 7.688 2.042 16.125 7.484 25.922 13.882 19.192 12.45 44.434 28.914 81.039 28.914 6.531 0 13.336-.543 20.618-1.699C482.129 463.017 512 413.006 512 323.736c0-67.359-22.32-137.238-69.199-190.312zM159.953 336.799c-31.027 0-59.195-9.32-80.152-26.942-27.625-23.203-42.594-60.828-34.699-110.637 1.086-6.871 2.586-13.949 4.558-21.297C79.187 68.787 184.383 65.181 227.043 65.181c164.726 0 237.938 118.661 243.042 210.52 2.45 44.633-11.16 83.008-38.242 98.316a53.4 53.4 0 0 1-17.348 6.262c-4.832.882-9.324 1.293-13.676 1.293-39.398 0-62.734-32.051-97.301-44.434-18.64-6.734-35.722-8.981-52.594-8.981-23.203 0-45.996 4.355-71.511 7.418-6.6.817-13.062 1.224-19.46 1.224zm-50.961 52.187c-.274.274-.613.547-.886.817-11.226 10.141-30.551 7.824-43.817-5.442-11.226-11.226-14.629-26.809-9.32-38.106a23.144 23.144 0 0 1 4.625-6.598c2.176-2.176 4.762-3.878 7.622-5.106 8.164-3.398 18.301-2.449 27.418 2.454l.07.066c3.402 1.836 6.602 4.218 9.594 7.21 1.09 1.09 2.11 2.18 2.992 3.336l.07.066c2.516 3.062 4.489 6.398 5.852 9.801 4.827 11.362 3.605 23.678-4.22 31.502z"/><path d="M369.519 337.346c.543 5.918 4.63 10.886 10.344 12.722 21.16 6.465 43.207-.41 57.153-15.786a54.493 54.493 0 0 0 11.91-20.82l.066-.274c2.383-7.824-1.906-15.922-9.73-18.371-1.43-.406-2.855-.679-4.285-.679h-.137c-2.313 0-4.762.613-6.871 1.77l-50.691 27.078a14.743 14.743 0 0 0-7.759 14.36zM250.652 278.216l-17.488-17.418 29.258-29.258 36.062 36.062-18.914 18.914c-3.946 4.016-3.946 10.481 0 14.426 2.039 2.038 4.625 2.992 7.281 2.992 2.586 0 5.172-.954 7.211-2.992l18.914-18.848 2.859 2.855a10.081 10.081 0 0 0 7.211 2.996c2.656 0 5.242-.953 7.214-2.996 4.012-3.945 4.012-10.41 0-14.422l-2.859-2.859 27.965-28.031 24.086 24.086-28.37 28.371c-3.95 3.95-3.95 10.41 0 14.426 2.038 1.973 4.625 2.992 7.21 2.992 2.653 0 5.238-1.019 7.215-2.992l28.371-28.375 9.32 9.325c2.043 1.973 4.629 2.992 7.215 2.992a10.14 10.14 0 0 0 7.21-2.992c4.016-3.946 4.016-10.41 0-14.426l-9.32-9.321 11.973-11.977a9.918 9.918 0 0 0 2.859-5.851c.477-2.992-.477-6.191-2.859-8.57-.203-.207-.406-.41-.61-.477-3.95-3.472-10.004-3.266-13.813.477l-11.976 11.973-24.086-24.086 20.344-20.344a10.224 10.224 0 0 0 0-14.492c-3.946-3.95-10.41-3.95-14.426 0l-20.344 20.41-36.062-36.062 25.515-25.582c.34-.34.68-.746.954-1.157a10.007 10.007 0 0 0-.954-13.27c-3.945-4.011-10.41-4.011-14.422 0l-3.473 3.473-22.042 22.114-6.466-6.465c-4.015-4.016-10.48-4.016-14.426 0-4.015 3.945-4.015 10.41 0 14.426l6.465 6.461-28.035 27.969-33.476-33.477 40.148-40.144c1.836-1.84 2.856-4.29 2.922-6.738.206-2.789-.813-5.578-2.922-7.688-3.949-4.015-10.414-4.015-14.426 0l-5.172 5.102-34.973 35.043-12.586-12.59c-4.016-4.012-10.481-4.012-14.426 0-4.016 3.949-4.016 10.41 0 14.426l12.586 12.59-29.258 29.188-27.215-27.215 50.692-50.691 11.496-11.5c4.015-4.016 4.015-10.477 0-14.422-3.946-4.016-10.41-4.016-14.422 0l-32.52 32.523-29.668 29.664-10.137-10.07-5.922-5.918c-3.946-4.016-10.41-4.016-14.422 0-4.015 3.945-4.015 10.41 0 14.422l5.715 5.715 10.34 10.277-31.91 31.91-.543.543c-2.926 2.926-3.742 7.144-2.312 10.75.406 1.363 1.222 2.586 2.312 3.676a10.145 10.145 0 0 0 7.211 2.992c2.586 0 5.238-1.019 7.211-2.992l32.457-32.457 27.215 27.218-30.141 30.141c-3.946 4.015-3.946 10.48 0 14.426a10.1 10.1 0 0 0 7.21 2.992c2.657 0 5.242-.953 7.282-2.992l30.074-30.074 33.477 33.477-11.364 11.363c-4.015 4.016-4.015 10.477 0 14.422 1.973 2.043 4.559 2.996 7.215 2.996 2.582 0 5.168-.953 7.211-2.996l11.363-11.359 17.484 17.418c1.977 2.038 4.558 2.992 7.215 2.992 2.586 0 5.238-.954 7.21-2.992 3.948-3.951 3.948-10.412.002-14.428zm-31.91-31.843-33.477-33.477 29.258-29.258L248 217.115l-29.258 29.258zm58.106-29.258 28.035-27.965 36.062 36.063-28.035 27.965-36.062-36.063z"/></symbol>
+    <symbol id="icon__news" xml:space="preserve"><path d="M88.055 243.078 20.148 214.68c-6.55-2.75-14.066.625-16.371 7.339l-3.102 8.997c-2.316 6.722 1.531 13.992 8.387 15.878l71 19.399c6.254 1.714 12.766-1.723 14.871-7.86 2.11-6.136-.902-12.844-6.878-15.355zM87.172 382.325l-68.102 27.93c-6.578 2.695-9.508 10.382-6.395 16.77l4.176 8.558c3.114 6.379 10.981 8.809 17.157 5.289l63.93-36.488c5.621-3.207 7.793-10.242 4.95-16.066-2.841-5.833-9.724-8.454-15.716-5.993zM181.153 160.976c5.821-2.839 8.442-9.726 5.985-15.722l-27.926-68.102c-2.699-6.582-10.386-9.512-16.778-6.387l-8.554 4.164c-6.39 3.126-8.813 10.985-5.293 17.157l36.488 63.93c3.21 5.632 10.246 7.804 16.078 4.96zM501.307 304.305c-17.821 3.329-52.54 9.93-64.196 12.829-30.649-29.728-110.571-104.775-190.985-132.154-3.574-1.234-7.523.676-8.878 4.192-4.688 12.21-15.539 44.278-30.586 112.234-15.11 68.02-18.871 101.63-19.797 114.642-.246 3.824 2.465 7.152 6.226 7.586 84.485 9.188 188.642-24.914 229.036-38.914 9.313 7.586 37.989 28.242 52.727 38.852 4.809 3.454 11.531 1.418 13.687-4.133 10.238-26.578 21.462-77.207 23.434-105.574.434-5.92-4.809-10.669-10.668-9.56zm-161.075-13.75c-31.883 1.11-62.532 4.5-91.082 9.863-3.356.649-6.422-1.043-7.985-3.691-.082-.141-.137-.29-.207-.43a7.729 7.729 0 0 1-.847-3.031c-.012-.207-.004-.41 0-.622.011-.527.035-1.058.156-1.598 6.043-25.84 11.223-45.328 15.356-59.695 1.359-4.626 6.476-6.906 10.793-4.809 21.523 10.543 47.547 26.394 78.317 50.195 5.733 4.443 2.776 13.572-4.501 13.818z"/></symbol>
+    <symbol id="icon__cow" xml:space="preserve">
+      <defs>
+        <style>.st0{fill:#ffffff}</style>
+      </defs>
+      <path d="M399.281 358.386c1.851-6.922 13.742-50.817 21.246-87.961 9.215-2.981 18.024-7.266 26.043-13.16 36.254-26.727 45.813-79.563 48.282-108.383 1.027-11.754-6.821-22.41-18.336-24.91-18.891-4.16-49.008-8.39-77.742-2.816-.84.148-1.75.21-2.578.366l23.852-63.754c7.094-18.883.207-39.786-16.723-50.786-16.926-11-38.824-8.839-53.214 5.313l-36.836 36.188c-4.352-.962-9.184-1.512-14.528-1.512h-85.496c-5.343 0-10.176.55-14.527 1.512l-36.836-36.188C147.491-1.821 125.597-4.017 108.67 6.983c-16.93 11-23.816 31.871-16.722 50.786l15.453 41.301 8.332 22.516c-29.441-6.34-60.781-1.895-80.222 2.386-11.547 2.5-19.359 13.156-18.367 24.91 2.469 28.82 12.027 81.656 48.317 108.383 8.019 5.894 16.824 10.179 26.042 13.16 7.504 37.11 19.325 80.969 21.141 87.687.07.137 3.531 13.774 4.149 24.879 0 3.492-.07 7.226-.137 11.062-.45 25.051-.961 56.27 13.328 77.754C148.523 499.598 187.378 512 256.014 512c68.602 0 107.458-12.402 125.997-40.191 14.324-21.485 13.774-52.703 13.328-77.754-.066-3.836-.102-7.57-.137-11.062.309-5.519 1.336-11.687 2.262-16.45.961-4.766 1.817-8.157 1.817-8.157zM376.526 39.194c1.184-1.179 2.875-1.606 4.469-1.301.203.039.39.106.586.168.418.133.836.274 1.218.516 1.988 1.305 2.809 3.773 1.953 6l-10.867 29.027-5.262 13.844c-7.82-8.973-14.656-14.993-19.406-18.786-.48-.41-.992-.789-1.472-1.195l28.781-28.273zm-247.331-.616a5.143 5.143 0 0 1 2.777-.821c1.266 0 2.535.481 3.528 1.438l26.437 25.965 2.336 2.317c-.476.402-.988.781-1.496 1.187-4.113 3.262-9.762 8.313-16.218 15.328-1.09 1.145-2.176 2.282-3.274 3.481l-16.043-42.894c-.825-2.229-.036-4.697 1.953-6.001zm251.48 238.051c-6.031 27.172-13.778 57.086-17.856 72.094-.168.722-4.519 17.785-5.273 32.828l-.035.926c0 3.871.066 7.985.137 12.196.343 19.843.789 44.546-6.993 56.234-10.347 15.519-42.214 23.402-94.641 23.402-52.461 0-84.297-7.883-94.679-23.402-7.778-11.688-7.333-36.391-6.989-56.234.066-4.211.137-8.325.137-12.196l-.035-.926c-.754-15.043-5.106-32.106-5.344-33.066-4.042-14.871-11.789-44.718-17.785-71.855-4.625-20.902-8.222-40.196-8.328-49.895-.274-20.042 7.094-44.855 21.898-73.809.035-.034.035-.101.066-.136a231.137 231.137 0 0 1 8.328-14.938c.446-.723.855-1.442 1.301-2.126 9.734-15.594 18.848-25.804 25.254-31.938a93.025 93.025 0 0 1 6.305-5.55c1.199-.961 2.398-1.918 3.566-2.879.168-.137.34-.273.512-.414 6.168-5.07 10.246-8.391 16.484-9.66.906-.192 1.86-.329 2.86-.43.152-.015.308-.031.465-.042a36.124 36.124 0 0 1 3.218-.145h85.496c2.466 0 4.626.207 6.543.618 6.238 1.269 10.317 4.59 16.481 9.66.172.141.344.277.515.414 1.199.962 2.363 1.918 3.563 2.879 1.578 1.234 3.769 3.082 6.374 5.586 6.406 6.133 15.489 16.344 25.188 31.902.445.684.855 1.402 1.301 2.126a236.216 236.216 0 0 1 4.07 6.98c.054.098.109.199.168.301a230.139 230.139 0 0 1 4.09 7.657c.031.035.031.102.066.136 14.805 28.954 22.172 53.766 21.93 73.809-.1 9.697-3.733 28.99-8.358 49.893z" class="st0" style="fill:#ffffff"/><path d="M194.405 263.21c4.446 0 8.481-2.074 11.61-5.656 4.219-4.672 6.859-11.91 6.859-20.164 0-10.402-4.222-19.223-10.48-23.297-2.41-1.618-5.125-2.485-7.989-2.485-10.406 0-18.507 11.344-18.507 25.782 0 14.473 8.101 25.82 18.507 25.82zm-3.996-38.41c2.223 0 3.996 2.149 3.996 4.902 0 2.79-1.773 4.938-3.996 4.938-2.262 0-4.07-2.148-4.07-4.938 0-2.753 1.808-4.902 4.07-4.902zM317.593 263.433c10.367 0 18.508-11.347 18.508-25.82 0-14.438-8.141-25.782-18.508-25.782-2.863 0-5.539.867-7.914 2.41-6.294 4.07-10.555 12.89-10.555 23.371 0 8.254 2.641 15.527 6.898 20.203 3.091 3.544 7.125 5.618 11.571 5.618zm-4.07-38.41c2.262 0 4.035 2.148 4.035 4.898 0 2.793-1.774 4.938-4.035 4.938-2.222 0-3.996-2.145-3.996-4.938-.001-2.75 1.773-4.898 3.996-4.898zM193.741 408.504c-3.332 3.535-3.206 9.09.29 12.461 3.535 3.375 17.434 16.652 20.969 20.023 1.726 1.602 3.906 2.43 6.086 2.43a8.817 8.817 0 0 0 6.375-2.714c8.882-9.297 8.512-24.098-.782-32.942-9.293-8.876-24.055-8.548-32.938.742zM285.292 407.762c-9.293 8.844-9.621 23.645-.785 32.942a8.826 8.826 0 0 0 6.374 2.714c2.18 0 4.402-.828 6.086-2.43 3.539-3.371 17.438-16.648 20.973-20.023a8.792 8.792 0 0 0 .289-12.461c-8.882-9.29-23.644-9.618-32.937-.742zM336.851 359.926c-25.633-10.824-52.805-16.309-80.836-16.309-28.027 0-55.234 5.485-80.832 16.309-3.496 1.477-5.141 5.484-3.668 8.981 1.473 3.496 5.516 5.105 8.977 3.633 23.918-10.11 49.313-15.215 75.523-15.215 26.18 0 51.57 5.106 75.489 15.215a6.738 6.738 0 0 0 2.676.546 6.84 6.84 0 0 0 6.304-4.179 6.868 6.868 0 0 0-3.633-8.981z" class="st0" style="fill:#ffffff"/>
+    </symbol>
   </svg>
-  <header id="header" class="header">
+  <header id="header" class="header"><!-- nav-open -->
     <a href="#" class="logo">
       <img src="./image/logo.png" alt="牛兵衛">
     </a>
+    <button class="humburger">
+      <span></span>
+      <span></span>
+      メニュー
+    </button>
     <div id="navbar" class="navbar">
       <ul class="navbar__menu">
         <li>
@@ -85,30 +100,39 @@
           </a>
         </li>
       </ul>
-      <button class="humburger">
-        <span></span>
-        <span></span>
-      </button>
     </div>
-    <div class="top-menu">
-      <ul>
-        <li>
-          <a href="#">メニュー</a>
-        </li>
-        <li>
-          <a href="#">商品一覧</a>
-        </li>
-        <li>
-          <a href="#">牛兵衛に<br class="sp">ついて</a>
-        </li>
-        <li>
-          <a href="#">ギフトを贈る</a>
-        </li>
-        <li>
-          <a href="#">お知らせ</a>
-        </li>
-      </ul>
-    </div>
+    <ul class="top-menu">
+      <li class="top-menu__menu">
+        <a href="#">メニュー</a>
+      </li>
+      <li class="top-menu__top">
+        <a href="#" class="current">
+          <svg class="icon__content" viewBox="0 0 512 512"><use xlink:href="#icon__home"></use></svg>
+          <span>TOP</span>
+        </a>
+      </li>
+      <li class="top-menu__products">
+        <a href="#">
+          <svg class="icon__content" viewBox="0 0 512 512"><use xlink:href="#icon__meat"></use></svg>
+          <span>商品一覧</span>
+        </a>
+      </li>
+      <li class="top-menu__about">
+        <a href="#">
+          <svg class="icon__content" viewBox="0 0 512 512"><use xlink:href="#icon__cow"></use></svg>
+          <span>牛兵衛に<br class="sp">ついて</span>
+        </a>
+      </li>
+      <li class="top-menu__gift">
+        <a href="#">ギフトを贈る</a>
+      </li>
+      <li class="top-menu__news">
+        <a href="#">
+          <svg class="icon__content" viewBox="0 0 512 512"><use xlink:href="#icon__news"></use></svg>
+          <span>お知らせ</span>
+        </a>
+      </li>
+    </ul>
     <nav id="global-nav" class="global-nav">
       <div class="global-nav__inner">
         <div class="center-item">
@@ -129,7 +153,7 @@
               <a href="#">お問い合わせ</a>
             </li>
           </ul>
-          <ul class="center-item__nav">
+          <ul class="center-item__nav line-down">
             <li>
               <a href="#">商品一覧</a>
             </li>
@@ -153,7 +177,7 @@
             </a>
             <p class="left-item__text">
               営業時間：11:30～14:00(13:40) / 17:00～22:30<br>
-              〒325-0026 那須塩原市上厚崎720-4&emsp;FAX：0287-63-5571
+              〒325-0026 那須塩原市上厚崎720-4<br class="sp">FAX：0287-63-5571
             </p>
           </div>
           <div class="right-item">
@@ -200,18 +224,28 @@
 
   <main>
     <section id="top">
-      <h1 class="main-title"><!-- 後で！！！一文字ずつにする！！！ --->
-        <span class="main-title__en">JUST MEAT</span>
-        <span class="main-title__ja">匠の味をお店でも、ご家庭でも。</span>
+      <h1 class="main-title">
+        <p class="main-title__en">
+          <span class="fade-delay">J</span><span class="fade-delay">U</span><span class="fade-delay">S</span><span class="fade-delay">T</span><span class="fade-delay">&nbsp;</span><span class="fade-delay">M</span><span class="fade-delay">E</span><span class="fade-delay">A</span><span class="fade-delay">T</span>
+        </p>
+        <p class="main-title__ja">
+          <span class="fade-delay">匠</span><span class="fade-delay">の</span><span class="fade-delay">味</span><span class="fade-delay">を</span><span class="fade-delay">お</span><span class="fade-delay">店</span><span class="fade-delay">で</span><span class="fade-delay">も</span><span class="fade-delay">、</span><span class="fade-delay">ご</span><span class="fade-delay">家</span><span class="fade-delay">庭</span><span class="fade-delay">で</span><span class="fade-delay">も</span><span class="fade-delay">。</span>
+        </p>
       </h1>
-      <div class="top-img1">
-        <img src="./image/top1-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      <div class="top-img1 top-slider">
+        <img class="img" src="./image/top1-1.png" alt="">
+        <img class="img" src="./image/top1-2.png" alt="">
+        <img class="img" src="./image/top1-3.png" alt="">
       </div>
-      <div class="top-img2">
-        <img src="./image/top2-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      <div class="top-img2 top-slider">
+        <img class="img" src="./image/top2-1.png" alt="">
+        <img class="img" src="./image/top2-2.png" alt="">
+        <img class="img" src="./image/top2-3.png" alt="">
       </div>
-      <div class="top-img3">
-        <img src="./image/top3-1.png" alt=""><!-- 後でスライダーに変えるよ！ -->
+      <div class="top-img3 top-slider">
+        <img class="img" src="./image/top3-1.png" alt="">
+        <img class="img" src="./image/top3-2.png" alt="">
+        <img class="img" src="./image/top3-3.png" alt="">
       </div>
       <div class="scroll">
         <p>SCROLL</p>
@@ -222,11 +256,10 @@
     <section id="about" class="about section-area pict-zoom">
       <div class="about__inner">
         <h2 class="sec-title">
-          <span class="sec-title__en">ABOUT US</span>
-          <span class="sec-title__ja">厳選した素材を、<br>
-            肉の匠が<br>
-            提供する焼肉店
-          </span>
+          <p class="sec-title__en">ABOUT US</p>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">厳</span><span class="sec-fade-delay">選</span><span class="sec-fade-delay">し</span><span class="sec-fade-delay">た</span><span class="sec-fade-delay">素</span><span class="sec-fade-delay">材</span><span class="sec-fade-delay">を</span>、<br><span class="sec-fade-delay">肉</span><span class="sec-fade-delay">の</span><span class="sec-fade-delay">匠</span><span class="sec-fade-delay">が</span><br><span class="sec-fade-delay">提</span><span class="sec-fade-delay">供</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">る</span><span class="sec-fade-delay">焼</span><span class="sec-fade-delay">肉</span><span class="sec-fade-delay">店</span>
+          </p>
         </h2>
         <div class="text">
           <p>精肉店から始まった当店は、こだわりの強い店主自ら目利きした良質なお肉を、もっと多くの人に味わって頂きたいと思い、焼肉牛兵衛を立ち上げました。</p>
@@ -237,7 +270,7 @@
       <a href="#" class="about__link link">
         <div class="text">
           <span class="icon">
-            <svg viewBox="-8 -4 40 40" class="icon__content"><use xlink:href="#icon__arrow__r"></svg>
+            <svg viewBox="-8 -4 40 40" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></svg>
           </span>
           <p>牛兵衛について</p>
         </div>
@@ -250,8 +283,10 @@
     <section id="gift" class="gift section-area b-white-img pict-zoom">
       <div class="gift__top">
         <h2 class="sec-title">
-          <span class="sec-title__en">GIFT</span>
-          <span class="sec-title__ja">ギフトにおすすめ</span>
+          <p class="sec-title__en">GIFT</p>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">ギ</span><span class="sec-fade-delay">フ</span><span class="sec-fade-delay">ト</span><span class="sec-fade-delay">に</span><span class="sec-fade-delay">お</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">め</span>
+          </p>
         </h2>
         <div class="container">
           <div class="slide-items">
@@ -265,9 +300,9 @@
                   <span class="tax">(税込)</span>
                 </p>
                 <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                <div class="btn">
-                  <p>ご購入はこちら</p>
-                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                <div class="btn clip-btn">
+                  <span class="txt">ご購入はこちら</span>
+                  <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                 </div>
               </a>
             </div>
@@ -281,9 +316,9 @@
                   <span class="tax">(税込)</span>
                 </p>
                 <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
-                <div class="btn">
-                  <p>ご購入はこちら</p>
-                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                <div class="btn clip-btn">
+                  <span class="txt">ご購入はこちら</span>
+                  <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                 </div>
               </a>
             </div>
@@ -297,9 +332,9 @@
                   <span class="tax">(税込)</span>
                 </p>
                 <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                <div class="btn">
-                  <p>ご購入はこちら</p>
-                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                <div class="btn clip-btn">
+                  <span class="txt">ご購入はこちら</span>
+                  <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                 </div>
               </a>
             </div>
@@ -313,10 +348,10 @@
                   <span class="tax">(税込)</span>
                 </p>
                 <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                <div class="btn">
-                  <p>ご購入はこちら</p>
+                <div class="btn clip-btn">
+                  <span class="txt">ご購入はこちら</span>
                   <div class="icon">
-                    <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                   </div>
                 </div>
               </a>
@@ -331,9 +366,9 @@
                   <span class="tax">(税込)</span>
                 </p>
                 <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。和牛そぼろはご飯のお供に最適です。</p>
-                <div class="btn">
-                  <p>ご購入はこちら</p>
-                  <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                <div class="btn clip-btn">
+                  <span class="txt">ご購入はこちら</span>
+                  <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                 </div>
               </a>
             </div>
@@ -344,15 +379,15 @@
             <div class="side-scroll"></div>
             <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
             <button id="prev" class="scroll-ctrl__btn">
-              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__l"></use></svg>
+              <svg viewBox="0 0 22 22" class="icon__content arw-l"><use xlink:href="#icon__arrow__l"></use></svg>
             </button>
             <button id="next" class="scroll-ctrl__btn">
-              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
             </button>
-            <a href="#" class="link">
+            <a href="#" class="link line-r">
               <p class="text">ギフト一覧を見る</p>
               <span class="icon">
-                <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
               </span>
             </a>
           </div>
@@ -382,82 +417,88 @@
       </div>
     </section>
 
-    <section id="recommendation" class="section-area b-white-img pict-zoom">
-      <h2 class="sec-title">
-        <span class="sec-title__en">RECOMMENDATION</span>
-        <span class="sec-title__ja">こんなシーンにおすすめ</span>
-      </h2>
-      <div class="contents">
-        <a class="contents__item link" href="#">
-          <div class="text-area">
-            <div class="text-area__text">
-              <h3>いつもの料理に</h3>
-              <p>
-                晩ごはんの献立にプラスしたり、<br>
-                晩酌のお供としても大人気です。<br>
-                いつも頑張っている自分へのご褒美に<br>
-                お家でカジュアルに牛兵衞の“味”を楽しみませんか？
-              </p>
-              <div class="text-area__link">
-                <span class="text">お手軽に楽しめる商品はこちら</span>
-                <span class="icon">
-                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
-                </span>
+    <section id="recommendation" class="recommendation section-area b-white-img pict-zoom">
+      <div class="recommendation__container">
+        <h2 class="sec-title">
+          <p class="sec-title__en">RECOMMENDATION</p>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">こ</span><span class="sec-fade-delay">ん</span><span class="sec-fade-delay">な</span><span class="sec-fade-delay">シ</span><span class="sec-fade-delay">ー</span><span class="sec-fade-delay">ン</span><span class="sec-fade-delay">に</span><br class="sp"><span class="sec-fade-delay">お</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">め</span>
+          </p>
+        </h2>
+        <div class="contents">
+          <a class="contents__item link line-r" href="#">
+            <div class="item__img">
+              <img src="./image/scene1.png" alt="picture">
+            </div>
+            <div class="text-area">
+              <div class="text-area__text">
+                <h3>いつもの料理に</h3>
+                <p>
+                  晩ごはんの献立にプラスしたり、<br>
+                  晩酌のお供としても大人気です。<br>
+                  いつも頑張っている自分へのご褒美に<br>
+                  お家でカジュアルに牛兵衞の“味”を楽しみませんか？
+                </p>
+                <div class="text-area__link">
+                  <span class="text">お手軽に楽しめる商品はこちら</span>
+                  <span class="icon">
+                    <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__img">
-            <img src="./image/scene1.png" alt="picture">
-          </div>
-        </a>
-        <a class="contents__item link" href="#">
-          <div class="text-area">
-            <div class="text-area__text">
-              <h3>お店の味をご自宅で</h3>
-              <p>
-                牛兵衛の焼肉セットを<br>
-                ご友人やご家族でお楽しみ頂けます。
-              </p>
-              <div class="text-area__link">
-                <div class="text">お家で楽しめる焼肉セットはこちら</div>
-                <span class="icon">
-                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
-                </span>
+          </a>
+          <a class="contents__item link line-r" href="#">
+            <div class="item__img">
+              <img src="./image/scene2.png" alt="picture">
+            </div>
+            <div class="text-area">
+              <div class="text-area__text">
+                <h3>お店の味をご自宅で</h3>
+                <p>
+                  牛兵衛の焼肉セットを<br>
+                  ご友人やご家族でお楽しみ頂けます。
+                </p>
+                <div class="text-area__link">
+                  <div class="text">お家で楽しめる焼肉セットはこちら</div>
+                  <span class="icon">
+                    <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__img">
-            <img src="./image/scene2.png" alt="picture">
-          </div>
-        </a>
-        <a class="contents__item link" href="#">
-          <div class="text-area">
-            <div class="text-area__text">
-              <h3>大切な人・お世話になった人へのギフトとして</h3>
-              <p>
-                季節のご挨拶、お祝い、お礼、お返しの贈り物にぴったり。<br>
-                牛兵衞専用のギフトBOXに入れてお送りいたします。
-              </p>
-              <div class="text-area__link">
-                <div class="text">贈り物に喜ばれる牛兵衞のギフト一覧はこちら</div>
-                <span class="icon">
-                  <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
-                </span>
+          </a>
+          <a class="contents__item link line-r" href="#">
+            <div class="item__img">
+              <img src="./image/scene3.png" alt="picture">
+            </div>
+            <div class="text-area">
+              <div class="text-area__text">
+                <h3>大切な人・お世話になった人へのギフトとして</h3>
+                <p>
+                  季節のご挨拶、お祝い、お礼、お返しの贈り物にぴったり。<br>
+                  牛兵衞専用のギフトBOXに入れてお送りいたします。
+                </p>
+                <div class="text-area__link">
+                  <div class="text">贈り物に喜ばれる牛兵衞のギフト一覧はこちら</div>
+                  <span class="icon">
+                    <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item__img">
-            <img src="./image/scene3.png" alt="picture">
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="products" class="products section-area b-white-img pict-zoom">
       <div class="products__wrap">
         <h2 class="sec-title sec-title-c">
-          <span class="sec-title__ja">取扱商品</span>
-          <span class="sec-title__en sec-title-c__en">PRODUCTS HANDLED</span>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">取</span><span class="sec-fade-delay">扱</span><span class="sec-fade-delay">商</span><span class="sec-fade-delay">品</span>
+          </p>
+          <p class="sec-title__en sec-title-c__en">PRODUCTS HANDLED</p>
         </h2>
         <div class="products-area">
           <div class="products__inner">
@@ -465,51 +506,39 @@
               <dl>
                 <dt>ラインナップ</dt>
                 <dd>
-                  <button class="is-select">
-                    ALL
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    牛丼・生姜焼き丼
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    ハンバーグ
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    ギフト
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    牛肉
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    豚肉
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    焼肉セット
-                  </button>
-                </dd>
-                <dd>
-                  <button>
-                    肉加工品
-                  </button>
+                  <ul>
+                    <li>
+                      <button class="p-btn is-select">ALL</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">牛丼・生姜焼き丼</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">ハンバーグ</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">ギフト</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">牛肉</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">豚肉</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">焼肉セット</button>
+                    </li>
+                    <li>
+                      <button class="p-btn">肉加工品</button>
+                    </li>
+                  </ul>
                 </dd>
               </dl>
             </div>
 
             <div class="lineup">
               <div class="lineup__items lineup__all is-select">
-                <div class="item">
+                <div class="item p-item1">
                   <a class="link" href="#">
                     <div class="item__img">
                       <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
@@ -519,9 +548,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -535,9 +564,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -551,9 +580,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -567,9 +596,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -583,9 +612,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -599,9 +628,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -618,9 +647,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -634,9 +663,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -650,9 +679,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -666,9 +695,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -685,9 +714,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -701,9 +730,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -717,9 +746,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -736,9 +765,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -752,9 +781,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -768,9 +797,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -784,9 +813,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -800,9 +829,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">和牛の旨味がぎゅっと凝縮したローストビーフとお楽しみ頂けます。お好きな厚みにカットしてお召し上がり下さい。和牛そぼろはご飯のお供に最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -816,9 +845,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -835,9 +864,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -851,9 +880,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -867,9 +896,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -883,9 +912,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -899,9 +928,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -915,9 +944,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -934,9 +963,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -950,9 +979,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -966,9 +995,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -985,9 +1014,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉です。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1001,9 +1030,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉の赤身と霜降りのセットです。ご家庭で、贈答品としてご利用下さい。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1017,9 +1046,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1033,9 +1062,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">栃木和牛をはじめとした厳選した和牛のすき焼き肉と和牛のローストビーフのセットです。どちらも和牛の旨味を堪能頂ける商品となっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1049,9 +1078,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナー5本の焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1065,9 +1094,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">国産牛カルビ、和牛ロース肉、ハラミ、牛タン、和牛ホルモン、ウインナーの焼肉セットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1084,9 +1113,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1100,9 +1129,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">牛丼はお肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。豚丼は柔らかい豚肉の生姜焼きでご飯に乗せても、お酒のおつまみにも最適です。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1116,9 +1145,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1132,9 +1161,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1148,9 +1177,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">食べたいときに食べたい分、湯煎するだけでお召し上がり頂けます。色んな味をお楽しみ頂けるセットとなっております。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1164,9 +1193,9 @@
                       <span class="tax">(税込)</span>
                     </p>
                     <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-                    <div class="btn">
-                      <p>ご購入はこちら</p>
-                      <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+                    <div class="btn clip-btn">
+                      <span class="txt">ご購入はこちら</span>
+                      <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
                     </div>
                   </a>
                 </div>
@@ -1176,10 +1205,10 @@
         </div>
 
         <div class="products__bottom bottom-link">
-          <a class="link" href="#">
+          <a class="link line-r" href="#">
             <p class="text">商品一覧を見る</p>
             <span class="icon">
-              <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
             </span>
           </a>
         </div>
@@ -1189,11 +1218,10 @@
     <section id="ranking" class="ranking section-area b-white-img pict-zoom">
       <div class="ranking__inner">
         <h2 class="sec-title sec-title-c">
-          <span class="sec-title__ja">
-            人気商品<br>
-            ランキング
-          </span>
-          <span class="sec-title__en sec-title-c__en">RANKING</span>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">人</span><span class="sec-fade-delay">気</span><span class="sec-fade-delay">商</span><span class="sec-fade-delay">品</span><br><span class="sec-fade-delay">ラ</span><span class="sec-fade-delay">ン</span><span class="sec-fade-delay">キ</span><span class="sec-fade-delay">ン</span><span class="sec-fade-delay">グ</span>
+          </p>
+          <p class="sec-title__en sec-title-c__en">RANKING</p>
         </h2>
         <div class="ranking__items">
           <div class="item">
@@ -1209,9 +1237,9 @@
                 <span class="tax">(税込)</span>
               </p>
               <p class="item__comment">食べたい時に手軽にご自宅でお召し上がりいただけます。お肉の旨味と玉ねぎを絶妙な味付けで丁寧にお作りしております。</p>
-              <div class="btn">
-                <p>ご購入はこちら</p>
-                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <div class="btn clip-btn">
+                <span class="txt">ご購入はこちら</span>
+                <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
               </div>
             </a>
           </div>
@@ -1228,9 +1256,9 @@
                 <span class="tax">(税込)</span>
               </p>
               <p class="item__comment">牛タン、和牛特上カルビ、和牛シンシンの焼きしゃぶ、和牛トモサンカク、サーロインのセットとなっております。</p>
-              <div class="btn">
-                <p>ご購入はこちら</p>
-                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <div class="btn clip-btn">
+                <span class="txt">ご購入はこちら</span>
+                <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
               </div>
             </a>
           </div>
@@ -1247,9 +1275,9 @@
                 <span class="tax">(税込)</span>
               </p>
               <p class="item__comment">ひとつひとつ丁寧に手ごねしております。口の中でとろけるお肉でお子様からお年寄りまで１６０ｇのハンバーグをぺろりとお召し上がり頂けます。</p>
-              <div class="btn">
-                <p>ご購入はこちら</p>
-                <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <div class="btn clip-btn">
+                <span class="txt">ご購入はこちら</span>
+                <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
               </div>
             </a>
           </div>
@@ -1260,8 +1288,10 @@
     <section id="voice" class="section-area voice b-white-img">
       <div class="voice__inner">
         <h2 class="sec-title">
-          <span class="sec-title__en">VOICE</span>
-          <span class="sec-title__ja">お客様の声</span>
+          <p class="sec-title__en">VOICE</p>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">お</span><span class="sec-fade-delay">客</span><span class="sec-fade-delay">様</span><span class="sec-fade-delay">の</span><span class="sec-fade-delay">声</span>
+          </p>
         </h2>
         <div class="container">
           <div class="slide-items">
@@ -1275,7 +1305,7 @@
                   <p class="comment">地元に愛されてる人気の焼肉屋。開店直後でも車がほぼ埋まっていて予約も受け付けてくれているので運が良くないと入れない。。もちろん焼き肉が一番だけど定期的に食べたくなるのがハンバーグ！最近では珍しいタイプの懐かしさを感じる煮込みハンバーグは舌でほぐせるくらいほろほろのお肉。上質なお肉を使ってるから出来るんだろう味は家庭では再現できない満足感があります。</p>
                 </div>
                 <div class="item__user">
-                  <p class="user-name">I.S様</p>
+                  <p class="user-name">さちふと様</p>
                   <dl class="user-products">
                     <dt>購入した商品</dt>
                     <dd>煮込みハンバーグ</dd>
@@ -1297,7 +1327,7 @@
                   </p>
                 </div>
                 <div class="item__user">
-                  <p class="user-name">さちふと様</p>
+                  <p class="user-name">I.S様</p>
                   <dl class="user-products">
                     <dt>購入した商品</dt>
                     <dd>牛丼の具</dd>
@@ -1388,10 +1418,10 @@
             <div class="side-scroll"></div>
             <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
             <button id="prev" class="scroll-ctrl__btn">
-              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__l"></use></svg>
+              <svg viewBox="0 0 22 22" class="icon__content arw-l"><use xlink:href="#icon__arrow__l"></use></svg>
             </button>
             <button id="next" class="scroll-ctrl__btn">
-              <svg viewBox="0 0 22 22" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+              <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
             </button>
           </div>
         </div>
@@ -1400,8 +1430,10 @@
 
     <section id="news" class="news section-area b-white-img pict-zoom">
       <h2 class="sec-title sec-title-c">
-        <span class="sec-title__ja">お知らせ</span>
-        <span class="sec-title__en sec-title-c__en">NEWS</span>
+        <p class="sec-title__ja">
+          <span class="sec-fade-delay">お</span><span class="sec-fade-delay">知</span><span class="sec-fade-delay">ら</span><span class="sec-fade-delay">せ</span>
+        </p>
+        <p class="sec-title__en sec-title-c__en">NEWS</p>
       </h2>
       <div class="news__menu">
         <ul>
@@ -1417,7 +1449,7 @@
             </div>
             <div class="item__text">
               <p class="item__date">
-                <date class="date">2023.01.20</date>
+                <date class="date" datetime="2023-01-20">2023.01.20</date>
                 <span>お知らせ</span>
               </p>
               <p class="item__title">オンラインショップオープンのお知らせ</p>
@@ -1427,10 +1459,10 @@
       </div>
       <!--実装省略-->
       <div class="news__bottom bottom-link">
-        <a class="link" href="#">
+        <a class="link line-r" href="#">
           <p class="text">お知らせ一覧を見る</p>
           <span class="icon">
-            <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+            <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
           </span>
         </a>
       </div>
@@ -1439,12 +1471,14 @@
     <section id="faq" class="faq section-area">
       <div class="faq__inner">
         <h2 class="sec-title">
-          <span class="sec-title__en">FAQ</span>
-          <span class="sec-title__ja">よくある質問</span>
+          <p class="sec-title__en">FAQ</p>
+          <p class="sec-title__ja">
+            <span class="sec-fade-delay">よ</span><span class="sec-fade-delay">く</span><span class="sec-fade-delay">あ</span><span class="sec-fade-delay">る</span><span class="sec-fade-delay">質</span><span class="sec-fade-delay">問</span>
+          </p>
         </h2>
         <div class="faq__area">
           <ul class="faq__lists">
-            <li class="list">
+            <li class="faq-btn"><!-- is-open -->
               <div class="faq__title">
                 <p class="text">蝶結びと結び切りの違いについて</p>
                 <div class="plus-icon">
@@ -1459,7 +1493,7 @@
                 </p>
               </div>
             </li>
-            <li class="list">
+            <li class="faq-btn">
               <div class="faq__title">
                 <p class="text">熨斗の種類・名入りについて</p>
                 <div class="plus-icon">
@@ -1475,7 +1509,7 @@
                 </p>
               </div>
             </li>
-            <li class="list">
+            <li class="faq-btn">
               <div class="faq__title">
                 <p class="text">贈答用のご注文について</p>
                 <div class="plus-icon">
@@ -1490,7 +1524,7 @@
                 </p>
               </div>
             </li>
-            <li class="list">
+            <li class="faq-btn">
               <div class="faq__title">
                 <p class="text">商品の状態について</p>
                 <div class="plus-icon">
@@ -1502,7 +1536,7 @@
                 <p>商品は全て冷凍となります。解凍後は早めにお召し上がりください。</p>
               </div>
             </li>
-            <li class="list">
+            <li class="faq-btn">
               <div class="faq__title">
                 <p class="text">年末年始期間の営業について</p>
                 <div class="plus-icon">
@@ -1524,7 +1558,7 @@
 
     <section id="instagram" class="instagram section-area b-white-img">
       <h2 class="sec-title">Instagram</h2>
-      <div class="container">
+      <div class="container insta-slider">
         <div class="item">
           <div class="item__img">
             <img src="./image/instagram1.png" alt="か">
@@ -1591,10 +1625,10 @@
         </div>
       </div>
       <div class="instagram__bottom bottom-link">
-        <a class="link" href="#">
+        <a class="link line-r" href="#">
           <p class="text">インスタグラムを見る</p>
           <span class="icon">
-            <svg viewBox="0 0 21 21" class="icon__content"><use xlink:href="#icon__arrow__r"></use></svg>
+            <svg viewBox="0 0 21 21" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
           </span>
         </a>
       </div>
@@ -1605,12 +1639,16 @@
     <div class="footer__container">
 
       <div class="footer__list">
-        <a class="footer__to-top" href="#">
+        <a class="footer__to-top" id="to-top" href="#">
           <div class="icon">
-            <svg viewBox="-18.25 -24 60 60" class="icon__content"><use xlink:href="#icon__arrow__up"></use></svg>
+            <svg viewBox="-18.25 -24 60 60" class="icon__content arw-u"><use xlink:href="#icon__arrow__up"></use></svg>
           </div>
         </a>
-        <ul class="footer__nav">
+        <a class="footer__logo" href="#">
+          <img src="./image/logo_white.png" alt="牛兵衛">
+          和牛焼肉　牛兵衛
+        </a>
+        <ul class="footer__nav line-down">
           <li>
             <a href="#">商品一覧</a>
           </li>
@@ -1641,10 +1679,6 @@
             <a href="#">お問い合わせ</a>
           </li>
         </ul>
-        <a class="footer__logo" href="#">
-          <img src="./image/logo_white.png" alt="牛兵衛">
-          和牛焼肉　牛兵衛
-        </a>
       </div>
 
       <div class="footer__contact">
@@ -1714,6 +1748,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="./js/app.js"></script>
 </body>
 </html>
