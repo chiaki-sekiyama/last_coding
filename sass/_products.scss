@@ -1,0 +1,199 @@
+@use "./import" as f;
+/* products handled */
+.products {
+  background: f.$bg;
+  &__wrap {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    @include f.sp {
+      max-width: none;
+      margin: 0;
+      padding: 0 1.5rem;
+    }
+  }
+  .sec-title {
+    &__ja {
+      writing-mode: vertical-rl;
+      margin-right: 0;
+    }
+  }
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    @include f.sp {
+      display: block;
+    }
+    .side-bar {
+      width: 220px;
+      padding: 30px 0;
+      margin-right: 50px;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      position: sticky;
+      top: 168px;
+      @include f.sp {
+        width: 100%;
+        position: static;
+        padding: 2.47rem 0;
+        margin-right: 0;
+        margin-bottom: 3.45rem;
+      }
+      dl {
+        line-height: 1.5;
+        letter-spacing: 0.04rem;
+      }
+      dt {
+        margin-bottom: 15px;
+        font-weight: 500;
+        @include f.sp {
+          margin-bottom: 1.5rem;
+          font-size: 1.42rem;
+          letter-spacing: 0.06rem;
+        }
+      }
+      dd {
+        ul {
+          @include f.sp {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              margin-right: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+        .p-btn {
+          border: none;
+          outline: none;
+          background: none;
+          cursor: pointer;
+          display: block;
+          width: 100%;
+          text-align: left;
+          padding: 8px 0 8px 25px;
+          font-family: "Shippori Mincho", 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+          font-size: 0.875rem;
+          font-weight: 500;
+          position: relative;
+          @include f.sp {
+            padding: 0.18rem 1rem;
+            width: auto;
+            font-size: 1.2rem;
+            letter-spacing: 0.05rem;
+            background-color: rgba(0,0,0,0.05);
+            text-align: center;
+          }
+          &::before {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 1px;
+            background-color: f.$black;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            @include f.sp {
+              display: none;
+            }
+          }
+        }
+        .is-select {
+          background-color: rgba(0,0,0,0.05);
+          @include f.sp {
+            background-color: f.$red;
+            color: f.$white;
+          }
+        }
+      }
+    }
+    .lineup {
+      flex-grow: 1;
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        overflow: hidden;
+        height: 0;
+        .item {
+          width: 46.99%;
+          opacity: 0;
+          @include f.sp {
+            letter-spacing: 0.06rem;
+          }
+          &:nth-child(n + 3) {
+            margin-top: 80px;
+            @include f.sp {
+              margin-top: 4rem;
+            }
+          }
+          &__img {
+            margin-bottom: 30px;
+            @include f.sp {
+              margin-bottom: 2rem;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &__menu {
+            font-weight: 500;
+            letter-spacing: 0.04rem;
+            line-height: 1.4;
+            margin-bottom: 9px;
+            @include f.sp {
+              font-size: 1.6rem;
+              line-height: 1.5;
+            }
+          }
+          &__price {
+            font-family: 'Lora', serif;
+            font-size: 1.125rem;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            @include f.sp {
+              font-size: 1.79rem;
+              line-height: 1.25;
+            }
+            .tax {
+              font-family: 'Shippori Mincho', serif;
+              font-size: 0.8125rem;
+              @include f.sp {
+                font-size: 1.37rem;
+                line-height: 1.27;
+              }
+            }
+          }
+          &__comment {
+            font-size: 0.875rem;
+            line-height: 1.72;
+            opacity: 0.6;
+            @include f.sp {
+              display: none;
+            }
+          }
+        }
+      }
+      &__items.is-select {
+        overflow: visible;
+        height: auto;
+      }
+    }
+  }
+  &__bottom {
+    margin-top: 80px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    @include f.sp {
+      margin-top: 4.5rem;
+      padding-top: 2.55rem;
+    }
+  }
+}

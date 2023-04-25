@@ -1,0 +1,484 @@
+@use "./import" as f;
+/* footer */
+.footer {
+  background: f.$red;
+  padding-top: 130px;
+  padding-bottom: 180px;
+  color: f.$white;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 20;
+  @include f.sp {
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    z-index: 7;
+    margin-bottom: 7.8rem;
+  }
+  &::before {
+    clip-path: ellipse(31.9rem 23.2rem at 31.9rem calc(100% - 23.2rem));
+    @include f.sp {
+      clip-path: ellipse(14.9rem 10.8rem at 14.9rem calc(100% - 10.8rem));
+    }
+  }
+  &::after {
+    clip-path: polygon(0% 0%,100% 0%,100% 100%,31.9rem 100%,0% calc(100% - 23.2rem));
+    @include f.sp {
+      clip-path: polygon(0% 0%,100% 0%,100% 100%,14.9rem 100%,0% calc(100% - 10.8rem));
+    }
+  }
+  &::before, &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: f.$black;
+  }
+  &__container {
+    padding: 0 40px;
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    position: relative;
+    @include f.sp {
+      padding: 0 1.5rem;
+      max-width: none;
+      margin: 0 1.5rem;
+      display: block;
+    }
+  }
+  &__list {
+    line-height: 1.25;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    @include f.sp {
+      display: block;
+    }
+  }
+  &__to-top {
+    order: 4;
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 5.9%;
+    overflow: hidden;
+    @include f.sp {
+      display: none;
+    }
+    .icon {
+      width: 100%;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      &::before {
+        content: "";
+        display: block;
+        border: 1px solid f.$white;
+        transform: rotate(45deg);
+        z-index: 0;
+        position: absolute;
+        top: 9px;
+        width: 39.5px;
+        height: 39.5px;
+        transition: background-color .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      }
+      &__content {
+        width: 50px;
+        height: 50px;
+        stroke: f.$white;
+        z-index: 1;
+        transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      }
+    }
+    &:hover {
+      .icon {
+        &::before {
+          background-color: f.$white;
+        }
+        &__content {
+          stroke: f.$black;
+        }
+      }
+    }
+  }
+  &__nav {
+    order: 3;
+    writing-mode: vertical-rl;
+    font-size: 1.125rem;
+    letter-spacing: 0.26rem;
+    font-weight: 600;
+    margin-left: 9.1%;
+    @include f.tab {
+      margin-left: 5.9%;
+    }
+    @include f.sp {
+      font-size: 1.8rem;
+      letter-spacing: 0.4rem;
+      margin: 0 0 5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    li {
+      margin-right: 26px;
+      @include f.sp {
+        margin-right: 2.5rem;
+      }
+      &:first-child {
+        margin-right: 0;
+      }
+      a {
+        display: inline-block;
+        position: relative;
+        padding: 0 5px;
+        overflow: hidden;
+        @include f.sp {
+          padding: 0 0.5rem;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          background: f.$white;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+        }
+      }
+    }
+  }
+  &__link {
+    order: 2;
+    writing-mode: vertical-rl;
+    font-size: 0.875rem;
+    letter-spacing: 0.2;
+    font-weight: 600;
+    margin-left: auto;
+    @include f.sp {
+      writing-mode: horizontal-tb;
+      font-size: 1.42rem;
+      letter-spacing: 0.06rem;
+      line-height: 1.23;
+      margin-left: 0;
+    }
+    li {
+      margin-left: 21px;
+      @include f.sp {
+        margin-left: 0;
+        margin-bottom: 1.47rem;
+      }
+      &:last-child {
+        margin-left: 0;
+        @include f.sp {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        display: inline-block;
+        position: relative;
+        padding: 0 2px;
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          background: f.$white;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          transform: scale(1, 0);
+          transform-origin: right bottom;
+          transition: transform 0.3s;
+        }
+        &:hover::after {
+          transform: scale(1, 1);
+          transform-origin: right top;
+        }
+      }
+    }
+  }
+  &__logo {
+    order: 1;
+    display: block;
+    font-size: 1.125rem;
+    letter-spacing: 0.045rem;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 11.8%;
+    @include f.tab {
+      margin-left: 0;
+    }
+    @include f.sp {
+      font-size: 1.6rem;
+      letter-spacing: 0.06rem;
+      line-height: 1.25;
+      margin: 0 auto 6.12rem;
+      display: table;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 23px;
+      display: block;
+      @include f.sp {
+        width: 13rem;
+        height: 13rem;
+        margin-bottom: 1.83rem;
+      }
+    }
+  }
+  &__contact {
+    width: 100%;
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    padding: 60px 0;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    @include f.sp {
+      margin-top: 5rem;
+      margin-bottom: 4rem;
+      padding: 4rem 0;
+      display: block;
+    }
+    .mailmagazine {
+      padding-right: 50px;
+      box-sizing: border-box;
+      border-right: 1px solid rgba(255,255,255,0.2);
+      @include f.sp {
+        padding-right: 0;
+        border-right: none;
+        margin-bottom: 4rem;
+      }
+    }
+    .address{
+      padding-left: 50px;
+      box-sizing: border-box;
+      @include f.sp {
+        padding-left: 0;
+        padding-top: 3.85rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+    }
+    .item {
+      width: 50%;
+      display: flex;
+      @include f.sp {
+        width: 100%;
+        display: block;
+      }
+      &__right {
+        width: 100%;
+        margin-left: 8.7%;
+        align-self: center;
+        @include f.sp {
+          margin-left: 0;
+        }
+      }
+      &__text {
+        font-size: 0.875rem;
+        letter-spacing: 0.035rem;
+        line-height: 1.72;
+        @include f.sp {
+          font-size: 1.42rem;
+          letter-spacing: 0.06rem;
+          line-height: 1.69;
+        }
+      }
+      &__title {
+        writing-mode: vertical-rl;
+        font-size: 1.125rem;
+        letter-spacing: 0.075rem;
+        line-height: 1.25;
+        font-weight: 600;
+        @include f.sp {
+          writing-mode: horizontal-tb;
+          margin-bottom: 1.64rem;
+          font-size: 1.6rem;
+          letter-spacing: 0.08rem;
+        }
+      }
+      .form-section {
+        margin-top: 20px;
+        display: flex;
+        max-width: 370px;
+        width: 100%;
+        @include f.sp {
+          margin-top: 1.95rem;
+          max-width: none;
+        }
+        .input-area {
+          font-family: 'Shippori Mincho', serif;
+          width: calc(100% - 110px);
+          background: none;
+          border: 1px solid rgba(255,255,255,0.54);
+          padding-left: 15px;
+          box-sizing: border-box;
+          color: f.$white;
+          &::placeholder {
+            color: rgba(255,255,255,0.54);
+            @include f.sp {
+              font-size: 1.42rem;
+              letter-spacing: 0.06rem;
+              line-height: 1.69;
+            }
+          }
+          &:focus {
+            outline: none;
+            color: rgba(255,255,255,0.54);
+            @include f.sp {
+              font-size: 1.42rem;
+              letter-spacing: 0.06rem;
+              line-height: 1.69;
+            }
+          }
+          @include f.sp {
+            width: calc(100% - 10rem);
+            padding-left: 1.5rem;
+          }
+        }
+        .email-btn {
+          width: 100px;
+          height: 50px;
+          margin-left: 10px;
+          font-family: 'Shippori Mincho', serif;
+          font-size: 0.875rem;
+          letter-spacing: 0.035rem;
+          line-height: 1.5;
+          border: none;
+          background-color: rgba(255,255,255,0.62);
+          cursor: pointer;
+          transition: 0.4s;
+          &:hover {
+            background-color: rgba(255,255,255,0.9);
+          }
+          @include f.sp {
+            width: 9rem;
+            height: 5rem;
+            margin-left: 1rem;
+            font-size: 1.42rem;
+            letter-spacing: 0.06rem;
+            line-height: 2.1;
+          }
+        }
+      }
+      .tel {
+        display: flex;
+        align-items: center;
+        font-family: 'Lora', serif;
+        font-size: 2.5rem;
+        letter-spacing: 0.08rem;
+        line-height: 1;
+        margin-bottom: 11px;
+        @include f.sp {
+          font-size: 3.8rem;
+          margin-bottom: 1rem;
+        }
+        span {
+          font-size: 1rem;
+          letter-spacing: 0.04rem;
+          margin-right: 10px;
+          @include f.sp {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+  &__mypage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.875rem;
+    letter-spacing: 0.035rem;
+    line-height: 1.25;
+    @include f.sp {
+      font-size: 1.42rem;
+      letter-spacing: 0.06rem;
+      line-height: 1.23;
+      margin-bottom: 3rem;
+    }
+    li:first-child {
+      margin-right: 30px;
+      @include f.sp {
+        margin-right: 3rem;
+      }
+    }
+    .icon {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      transition: 0.4s;
+      &__content {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        stroke: f.$white;
+        @include f.sp {
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1rem;
+        }
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  &__sns {
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-start;
+    @include f.sp {
+      margin-bottom: 4.88rem;
+    }
+    li:first-child {
+      margin-right: 15px;
+      @include f.sp {
+        margin-right: 1.5rem;
+      }
+    }
+    .icon {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      transition: 0.4s;
+      &__content {
+        width: 18px;
+        height: 18px;
+        fill: f.$white;
+        @include f.sp {
+          width: 1.79rem;
+          height: 1.79rem;
+        }
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 0.6875rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.3636;
+    margin-left: 25px;
+    @include f.sp {
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      line-height: 1.26;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}

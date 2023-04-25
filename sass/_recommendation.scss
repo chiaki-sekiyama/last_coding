@@ -1,0 +1,197 @@
+@use "./import" as f;
+/* recommendation */
+.recommendation {
+  &__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
+    max-width: 1060px;
+    box-sizing: border-box;
+    @include f.sp {
+    display: block;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: none;
+    margin: 0;
+    }
+  }
+  .sec-title {
+    writing-mode: vertical-rl;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky;
+    top: 100px;
+    flex-shrink: 0;
+    @include f.sp {
+      position: static;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
+      margin-bottom: 5rem;
+      width: 100%;
+      &__ja {
+        margin-right: 0;
+      }
+      &__en {
+        margin-top: 2.34rem;
+        writing-mode: horizontal-tb;
+      }
+    }
+    .sp {
+      display: none;
+      @include f.sp {
+        display: block;
+      }
+    }
+  }
+  .contents {
+    max-width: 810px;
+    @include f.sp {
+      max-width: none;
+      padding: 0 1.5rem;
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 75px;
+      pointer-events: none;
+      @include f.sp {
+        display: block;
+        margin-bottom: 6.5rem;
+      }
+      .text-area, .item__img {
+        width: 47%;
+        @include f.sp {
+          width: 100%;
+        }
+      }
+      .item__img{
+        pointer-events: auto;
+        @include f.sp {
+          margin-bottom: 2rem;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .text-area {
+        align-self: center;
+        &__text {
+          h3 {
+            font-size: 	1.5rem;
+            letter-spacing: 0.06rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            @include f.sp {
+              font-size: 2rem;
+              letter-spacing: 0.08rem;
+              line-height: 1.67;
+              margin-bottom: 1.5rem;
+            }
+          }
+          p {
+            font-size: 0.875rem;
+            letter-spacing: 0.035rem;
+            line-height: 2;
+            margin-bottom: 30px;
+            @include f.sp {
+              font-size: 1.42rem;
+              letter-spacing: 0.06rem;
+              line-height: 1.67;
+              margin-bottom: 1.73;
+            }
+          }
+        }
+        &__link {
+          font-size: 0.8125rem;
+          line-height: 1.62;
+          font-weight: 500;
+          padding-right: 38.98px;
+          position: relative;
+          display: table;
+          cursor: pointer;
+          pointer-events: auto;
+          @include f.sp {
+            font-size: 1.37rem;
+            letter-spacing: 0%;
+            line-height: 1.56;
+            padding-right: 4rem;
+          }
+          &::before {
+            content: "";
+            display: block;
+            background: f.$red;
+            z-index: 0;
+            transform: rotate(45deg);
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0;
+            box-sizing: border-box;
+            @include f.sp {
+              width: 2rem;
+              height: 2rem;
+              top: 0.13rem;
+              right: 0.3rem;
+            }
+          }
+          .text {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background: f.$black;
+              transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+            }
+          }
+          .icon {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            right: 5px;
+            top: 3px;
+            overflow: hidden;
+            @include f.sp {
+              right: 0.79rem;
+              top: 0.45rem;
+            }
+            &__content {
+              width: 12px;
+              height: 12px;
+              display: block;
+              stroke: f.$white;
+              transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+              @include f.sp {
+                width: 1.2rem;
+                height: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

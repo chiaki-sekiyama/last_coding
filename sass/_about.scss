@@ -1,0 +1,148 @@
+@use "./import" as f;
+/* about us */
+.about {
+  width: 100%;
+  padding-top: 80px;
+  @include f.sp {
+    padding-top: 12rem;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    @include f.sp {
+      padding: 0 1.5rem;
+      flex-direction: column;
+    }
+    .sec-title {
+      writing-mode: vertical-rl;
+      margin-left: 50px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      @include f.sp {
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 4.34rem;
+        width: 100%;
+        &__ja {
+          margin-right: 0;
+        }
+        &__en {
+          writing-mode: horizontal-tb;
+        }
+      }
+    }
+    .text {
+      max-width: 700px;
+      font-size: 1.125rem;
+      letter-spacing: 0.09rem;
+      line-height: 2.45;
+      padding-top: 50px;
+      @include f.sp {
+        max-width: none;
+        font-size: 1.42rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.9;
+        padding-top: 0;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 80px;
+    margin-left: max(40px,(100% - 980px)*.5);
+    @include f.sp {
+      flex-direction: column-reverse;
+      margin: 3.99rem 1.5rem 0;
+    }
+    .item__img {
+      width: 89%;
+      @include f.sp {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .text {
+      writing-mode: vertical-rl;
+      font-size: 	1.375rem;
+      letter-spacing: 0.11rem;
+      line-height: 1.25;
+      display: flex;
+      position: relative;
+      @include f.sp {
+        writing-mode: horizontal-tb;
+        font-size: 1.42rem;
+        letter-spacing: 0.06rem;
+        margin-top: 3.39rem;
+        p {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -0.2rem;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: f.$black;
+          }
+        }
+      }
+      &::before {
+        content: "";
+        display: block;
+        background: f.$red;
+        z-index: 0;
+        transform: rotate(45deg);
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 5px;
+        @include f.sp {
+          width: 1.7rem;
+          height: 1.7rem;
+          left: auto;
+          right: -2.7rem;
+        }
+      }
+    }
+    .icon {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      z-index: 1;
+      margin-bottom: 15px;
+      overflow: hidden;
+      @include f.sp {
+        margin-bottom: 0;
+        position: absolute;
+        right: -2.7rem;
+        top: 0.16rem;
+      }
+      &__content {
+        width: 25px;
+        height: 25px;
+        display: inline;
+        stroke: f.$white;
+        transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+        @include f.sp {
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+      }
+    }
+  }
+}

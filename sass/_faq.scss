@@ -1,0 +1,150 @@
+@use "./import" as f;
+/* faq */
+.faq {
+  background: f.$bg;
+  &__inner {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    @include f.sp {
+      display: block;
+      max-width: none;
+      margin: 0;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+  .sec-title {
+    writing-mode: vertical-rl;
+    flex-shrink: 0;
+    margin-right: 100px;
+    display: flex;
+      flex-direction: column;
+      @include f.sp {
+        writing-mode: horizontal-tb;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        &__ja {
+          letter-spacing: 0.21rem;
+          margin-right: 0;
+          margin-top: 0.55rem;
+        }
+      }
+  }
+  &__area {
+    flex-grow: 1;
+  }
+  &__lists {
+    .faq-btn {
+      letter-spacing: 0.04rem;
+      line-height: 1.5;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      cursor: pointer;
+      &:first-child {
+        border-top: 1px solid rgba(0,0,0,0.08);
+      }
+    }
+    .faq-btn.is-open {
+      background-color: f.$white;
+      .text {
+        transform: translateX(30px);
+        @include f.sp {
+          transform: translateX(1.5rem);
+        }
+      }
+      .plus-icon {
+        border: 1px solid rgba(0,0,0,0.3);
+        transform: translateX(-30px);
+        @include f.sp {
+          transform: translateX(-1.5rem);
+        }
+        span {
+          background-color: rgba(0,0,0,0.15);
+          &:nth-of-type(2) {
+            transform: rotate(0);
+          }
+        }
+      }
+      .faq__answer {
+        display: block;
+      }
+    }
+  }
+  &__title {
+    padding: 37px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include f.sp {
+      padding: 2rem 0;
+    }
+    .text {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      transition: transform .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      @include f.sp {
+        font-size: 1.42rem;
+        letter-spacing: 0.06rem;
+        line-height: 1.48;
+      }
+      &::before {
+        content: "Q.";
+        display: block;
+        font-family: 'Lora', serif;
+        margin-right: 15px;
+        color: f.$red;
+        font-size: 24px;
+        @include f.sp {
+          margin-right: 1.3rem;
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .plus-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid f.$red;
+      position: relative;
+      transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      @include f.sp {
+        width: 2rem;
+        height: 2rem;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: calc((100% - 1px)/2);
+        left: calc((100% - 15px)/2);
+        width: 15px;
+        height: 1px;
+        background-color: f.$red;
+        transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+        &:nth-of-type(2) {
+          transform: rotate(90deg);
+        }
+        @include f.sp {
+          width: 1rem;
+          left: calc((100% - 1rem)/2);
+        }
+      }
+    }
+  }
+  &__answer {
+    display: none;
+    font-size: 	0.875rem;
+    padding: 0 30px 40px;
+    @include f.sp {
+      font-size: 1.2rem;
+      line-height: 2;
+      padding: 0 1.5rem 1.5rem;
+    }
+  }
+}

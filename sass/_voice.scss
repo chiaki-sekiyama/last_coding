@@ -1,0 +1,203 @@
+@use "./import" as f;
+/* voice */
+.voice {
+  background: f.$bg;
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    margin-left: max(40px,(100% - 1100px)*.5);
+    @include f.sp {
+      display: block;
+      margin-left: 1.5rem;
+    }
+    .sec-title {
+      writing-mode: vertical-rl;
+      margin-right: 50px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      @include f.sp {
+        writing-mode: horizontal-tb;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        &__ja {
+          letter-spacing: 0.21rem;
+          margin-right: 0;
+          margin-top: 0.55rem;
+        }
+      }
+    }
+    .container {
+      padding-right: 40px;
+      background: f.$bg;
+      flex-grow: 1;
+      overflow: hidden;
+      @include f.sp {
+        padding-right: 1.5rem;
+      }
+      .slide-items {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+        .item {
+          margin-right: 40px;
+          display: flex;
+          flex-direction: column;
+          background: f.$white;
+          width: 390px;
+          height: auto;
+          @include f.sp {
+            margin-right: 2rem;
+            width: 23.5rem;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &__img {
+            width: 390px;
+            flex-shrink: 0;
+            aspect-ratio: 390/240;
+            @include f.sp {
+              width: 23.5rem;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &__text {
+            padding: 20px;
+            @include f.sp {
+              padding: 1.5rem;
+              letter-spacing: 0.06rem;
+            }
+          }
+          &__top {
+            .title {
+              color: f.$red;
+              font-weight: 500;
+              line-height: 1.5;
+              letter-spacing: 0.04rem;
+              margin-bottom: 12px;
+              @include f.sp {
+                font-size: 1.42rem;
+                line-height: 1.48;
+                margin-bottom: 1rem;
+              }
+            }
+            .comment {
+              font-size: 0.875rem;
+              line-height: 1.71;
+              letter-spacing: 0.035rem;
+              @include f.sp {
+                font-size: 1.2rem;
+                line-height: 1.5;
+              }
+            }
+          }
+          &__user {
+            font-size: 0.875rem;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            @include f.sp {
+              font-size: 1.2rem;
+              line-height: 1.5;
+              margin-top: 2rem;
+              padding-top: 1.5rem;
+            }
+            .user-name {
+              margin-bottom: 15px;
+              @include f.sp {
+                margin-bottom: 1rem;
+              }
+            }
+            .user-products {
+              display: flex;
+              padding-left: 12px;
+              @include f.sp {
+                padding-left: 1.2rem;
+              }
+              dt {
+                position: relative;
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background: f.$red;
+                  position: absolute;
+                  top: calc((100% - 6px)/2);
+                  left: -9px;
+                  @include f.sp {
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    top: calc((100% - 0.6rem)/2);
+                    left: -1rem;
+                  }
+                }
+                &::after{
+                  content: "：";
+                }
+              }
+            }
+          }
+        }
+      }
+      .scroll-ctrl {
+        margin-top: 80px;
+        margin-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include f.sp {
+          margin-top: 4rem;
+          margin-right: 0;
+        }
+        .side-scroll {
+          width: 100%;
+          height: 1px;
+          background-color:rgba(0,0,0,0.08);
+          margin-bottom: 40px;
+          @include f.sp {
+            margin-bottom: 0;
+          }
+        }
+        &__btn {
+          width: 50px;
+          height: 50px;
+          background: none;
+          padding: 0;
+          outline: none;
+          border: 1px solid rgba(0,0,0,0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: background-color .4s cubic-bezier(.43, .05, .17, 1) 0s;
+          overflow: hidden;
+          @include f.sp {
+            display: none;
+          }
+          &:first-of-type {
+            margin-right: 10px;
+          }
+          .icon__content {
+            width: 18px;
+            height: 18px;
+            stroke: f.$black;
+            z-index: 1;
+            transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+          }
+          &:hover {
+            background: f.$red;
+            .icon__content {
+              stroke: f.$white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

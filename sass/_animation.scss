@@ -1,0 +1,209 @@
+@use "./import" as f;
+/* ホバーで画像拡大 */
+.pict-zoom {
+  .link {
+    .item__img {
+      overflow: hidden;
+      img {
+        transition: 0.4s;
+      }
+    }
+    &:hover {
+      .item__img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+/* 矢印 */
+
+a:hover {
+  .arw-r {
+    animation: arw-r .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+  .arw-l {
+    animation: arw-l .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+  .arw-u {
+    animation: arw-u .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+}
+
+.scroll-ctrl__btn:hover {
+  .arw-r {
+    animation: arw-r .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+  .arw-l {
+    animation: arw-l .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+}
+
+@keyframes arw-r {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes arw-l {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes arw-u {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 右線 */
+.line-down {
+  a:hover::after {
+    animation: line-d .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+}
+
+@keyframes line-d {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 下線 */
+.line-r:hover {
+  .text::after {
+    animation: line-r .4s cubic-bezier(.43, .05, .17, 1) 0s;
+  }
+}
+
+@keyframes line-r {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  51% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* スライダー */
+
+.top-slider .img {
+  animation: zoom-up 4s linear 0s;
+  animation-fill-mode: both;
+}
+
+@keyframes zoom-up {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.5;
+  }
+}
+
+/* productsで画像が遅れて表示
+最初全部のitemに数字のクラスつけてanimation、animation-delayでやろうとして途方に暮れました、、 */
+
+.lineup__items.is-select .item {
+  transition: opacity .4s cubic-bezier(.43,.05,.17,1) var(--delay);
+  opacity: 1;
+}
+
+.lineup__items .item:nth-child(1) {
+  --delay: 0s
+}
+
+.lineup__items .item:nth-child(2) {
+  --delay: .05s
+}
+
+.lineup__items .item:nth-child(3) {
+  --delay: .1s
+}
+
+.lineup__items .item:nth-child(4) {
+  --delay: .15s
+}
+
+.lineup__items .item:nth-child(5) {
+  --delay: .2s
+}
+
+.lineup__items .item:nth-child(6) {
+  --delay: .25s
+}
+
+/* セクションタイトル版 */

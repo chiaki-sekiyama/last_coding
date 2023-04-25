@@ -1,0 +1,630 @@
+@use "./import" as f;
+
+/* header(ヘッダー) */
+.header {
+  .logo {
+    display: block;
+    position: fixed;
+    z-index: 12;
+    inset: 40px auto auto 40px;
+    transition: 0.4s;
+    @include f.sp {
+      inset: 1.5rem auto auto 1.5rem;
+    }
+    img {
+      width: 88px;
+      height: 88px;
+      @include f.sp {
+        width: 5.6rem;
+        height: 5.6rem;
+      }
+    }
+  }
+  .humburger {
+    position: fixed;
+    inset: 18px 18px auto auto;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    color: rgba(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    background: f.$red;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(.43, .05, .17, 1) 0s;
+    z-index: 13;
+    @include f.sp {
+      width: 7.8rem;
+      height: 7.8rem;
+      inset: auto 0 0 auto;
+      border-radius: 0;
+      color: f.$white;
+      font-size: 1rem;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 500;
+      padding-top: 4.77rem;
+    }
+    span {
+      display: block;
+      position: absolute;
+      background: f.$white;
+      width: 28px;
+      height: 1px;
+      transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+      @include f.sp {
+        width: 2.8rem;
+      }
+      &:nth-of-type(1) {
+        top:21px;
+        left: 11px;
+        @include f.sp {
+          top: 2.8rem;
+          left: 2.5rem;
+        }
+      }
+      &:nth-of-type(2) {
+        top: 28px;
+        left: 11px;
+        @include f.sp {
+          top: 3.48rem;
+          left: 2.5rem;
+        }
+      }
+    }
+  }
+  .navbar {
+    position: fixed;
+    top: 18px;
+    right: 78px;
+    z-index: 7;
+    @include f.sp {
+      top: 1.5rem;
+      right: 2rem;
+    }
+    &__menu {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      @include f.sp {
+        height: 5rem;
+      }
+      li {
+        padding: 0 12px;
+        @include f.sp {
+          padding: 0 1.21rem;
+        }
+      }
+    }
+    .icon {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      &__content {
+        width: 20px;
+        height: 20px;
+        stroke: f.$black;
+        transition: 0.4s;
+        @include f.sp {
+          width: 2.02rem;
+          height: 2.02rem;
+        }
+      }
+      &:hover {
+        .icon__content {
+          stroke: f.$red;
+        }
+      }
+    }
+  }
+  .top-menu {
+    writing-mode: vertical-rl;
+    position: absolute;
+    inset: 100px 32px auto auto;
+    z-index: 7;
+    font-weight: 600;
+    font-size: 	0.9375rem;
+    letter-spacing: 0.1125rem;
+    &__top {
+      display: none;
+    }
+    @include f.sp {
+      writing-mode: horizontal-tb;
+      box-sizing: border-box;
+      display: flex;
+      inset: auto 0 0 0;
+      height: 7.8rem;
+      padding-right: 7.8rem;
+      font-size: 1rem;
+      letter-spacing: 0;
+      line-height: 1.3;
+      color: f.$white;
+      background: f.$black;
+      position: fixed;
+      z-index: 12;
+      &__menu {
+        display: none;
+      }
+      &__top {
+        display: list-item;
+      }
+      &__gift {
+        display: none;
+      }
+      &__products, &__about, &__news {
+        &::before {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 3rem;
+          position: absolute;
+          top: 2.4rem;
+          left: 0;
+          background-color: rgba(225,225,225,0.5);
+        }
+      }
+    }
+    li {
+      margin-right: 30px;
+      @include f.sp {
+        margin-right: 0;
+        width: 25%;
+        position: relative;
+      }
+      &:first-child {
+        margin-right: 0;
+      }
+      .sp {
+        display: none;
+        @include f.sp {
+          display: block;
+        }
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        padding: 0 2px;
+        @include f.sp {
+          height: 100%;
+          flex-grow: 1;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: flex-start;
+          padding: 4rem 0 0;
+          box-sizing: border-box;
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 1.2rem;
+            left: calc(50% - 0.25rem);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: f.$red;
+            opacity: 0;
+          }
+          &.current::before {
+            opacity: 1;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            height: 2.6em;
+          }
+        }
+        .icon__content {
+          display: none;
+          @include f.sp {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 2.5rem;
+            width: 100%;
+            height: 1.5rem;
+            fill: f.$white;
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          background: f.$black;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          transform: scale(1, 0);
+          transform-origin: right bottom;
+          transition: transform 0.3s;
+          @include f.sp {
+            display: none;
+          }
+        }
+        &:hover::after {
+          transform: scale(1, 1);
+          transform-origin: right top;
+        }
+      }
+    }
+  }
+  .global-nav {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;;
+    inset: 0;
+    position: fixed;
+  }
+}
+
+.header.nav-open {
+  .logo {
+    transform: translate(40px, 40px);
+    @include f.sp {
+      transform: translate(4rem, 4rem);
+    }
+  }
+  .top-menu {
+    z-index: 7;
+  }
+  .humburger {
+    background: none;
+    transform: translate(-80px, 70px);
+    @include f.sp {
+      transform: none;
+      background: f.$red;
+      color: rgba(0,0,0,0);
+    }
+    span {
+      background: f.$black;
+      width: 35px;
+      @include f.sp {
+        background: f.$white;
+        width: 3.5rem;
+      }
+      &:nth-of-type(1) {
+        transform: rotate(30deg);
+        top: 50%;
+        left: 15%;
+        @include f.sp {
+          top: 42%;
+          left: 2.15rem;
+        }
+      }
+      &:nth-of-type(2) {
+        transform: rotate(-30deg);
+        top: 50%;
+        left: 15%;
+        @include f.sp {
+          top: 42%;
+          left: 2.15rem;
+        }
+      }
+    }
+    &::after {
+      content: "閉じる";
+      color: f.$black;
+      font-size: 1rem;
+      writing-mode: vertical-rl;
+      font-family: 'Shippori Mincho', serif;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      font-weight: 500;
+      @include f.sp {
+        color: f.$white;
+        writing-mode: horizontal-tb;
+        top: 5rem;
+        height: auto;
+      }
+    }
+  }
+  .global-nav {
+    background-color: #F1EDE8;
+    position: fixed;
+    z-index: 8;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__inner {
+      width: 100%;
+      position: relative;
+      z-index: 0;
+      padding: 80px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: stretch;
+      min-height: 100%;
+      scroll-behavior: none;
+      @include f.sp {
+        padding: 15rem 4rem 5rem;
+      }
+      .center-item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15vh;
+        @include f.sp {
+          flex-direction: column-reverse;
+          margin-bottom: 4rem;
+        }
+        &__nav {
+          writing-mode: vertical-rl;
+          font-size: 1.125rem;
+          letter-spacing: 0.26rem;
+          font-weight: 600;
+          margin-left: 120px;
+          @include f.sp {
+            font-size: 1.8rem;
+            letter-spacing: 0.4rem;
+            margin: 0 0 5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+          }
+          li {
+            margin-right: 26px;
+            @include f.sp {
+              margin-right: 1.7rem;
+            }
+            &:first-child {
+              margin-right: 0;
+            }
+            a {
+              display: inline-block;
+              position: relative;
+              padding: 0 5px;
+              overflow: hidden;
+              @include f.sp {
+                padding: 0 0.5rem;
+              }
+              &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                background: f.$black;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+              }
+            }
+          }
+        }
+        &__link {
+          writing-mode: vertical-rl;
+          font-size: 0.875rem;
+          letter-spacing: 0.2;
+          font-weight: 600;
+          @include f.sp {
+            writing-mode: horizontal-tb;
+            font-size: 1.42rem;
+            letter-spacing: 0.06rem;
+            line-height: 1.23;
+            margin-left: 0;
+          }
+          li {
+            margin-left: 25px;
+            @include f.sp {
+              margin-left: 0;
+              margin-bottom: 1.47rem;
+            }
+            &:last-child {
+              margin-left: 0;
+              @include f.sp {
+                margin-bottom: 0;
+              }
+            }
+            a {
+              display: inline-block;
+              position: relative;
+              padding: 0 2px;
+              &::after {
+                content: "";
+                display: block;
+                width: 1px;
+                background: f.$black;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                transform: scale(1, 0);
+                transform-origin: right bottom;
+                transition: transform 0.3s;
+              }
+              &:hover::after {
+                transform: scale(1, 1);
+                transform-origin: right top;
+              }
+            }
+          }
+        }
+      }
+      .bottom-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include f.sp {
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+        .left-item {
+          letter-spacing: 0.04rem;
+          flex-shrink: 0;
+          @include f.sp {
+            order: 2;
+            border-top: 1px solid rgba(0,0,0,0.2);
+            box-sizing: border-box;
+            padding-top: 2.5rem;
+            margin-bottom: 2.5rem;
+          }
+          &__title {
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 6px;
+            @include f.sp {
+              margin-bottom: 1rem;
+              font-size: 1.6rem;
+              letter-spacing: 0.08rem;
+            }
+          }
+          &__text {
+            font-size: 0.875rem;
+            line-height: 1.714;
+            @include f.sp {
+              font-size: 1.42rem;
+              letter-spacing: 0.06rem;
+              line-height: 1.7;
+            }
+            .sp {
+              display: none;
+              @include f.sp {
+                display: block;
+              }
+            }
+          }
+          .tel {
+            font-family: 'Lora', serif;
+            font-size: 2.375rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            margin-bottom: 3px;
+            @include f.sp {
+              font-size: 3.6rem;
+              letter-spacing: 0.3rem;
+              margin-bottom: 0.8rem;
+            }
+            span {
+              font-size: 1rem;
+              margin-right: 15px;
+              @include f.sp {
+                font-size: 1.42rem;
+                letter-spacing: 0.06rem;
+              }
+            }
+          }
+        }
+        .right-item {
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          @include f.sp {
+            display: contents;
+          }
+          &__mypage {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 0.875rem;
+            letter-spacing: 0.035rem;
+            line-height: 1.25;
+            width: 100%;
+            margin-bottom: 30px;
+            @include f.sp {
+              order: 1;
+              justify-content: flex-start;
+              font-size: 1.42rem;
+              letter-spacing: 0.06rem;
+              line-height: 1.23;
+              margin-bottom: 4rem;
+            }
+            li:first-child {
+              margin-right: 30px;
+              @include f.sp {
+                margin-right: 3rem;
+              }
+            }
+            .icon {
+              display: flex;
+              text-align: center;
+              justify-content: flex-end;
+              transition: 0.4s;
+              &__content {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                stroke: f.$black;
+                @include f.sp {
+                  width: 2rem;
+                  height: 2rem;
+                  margin-right: 1rem;
+                }
+              }
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+          }
+          &__sns {
+            display: flex;
+            @include f.sp {
+              order: 3;
+              margin-bottom: 4rem;
+            }
+            li:first-child {
+              margin-right: 15px;
+              @include f.sp {
+                margin-right: 1.5rem;
+              }
+            }
+            .icon {
+              display: flex;
+              text-align: center;
+              justify-content: center;
+              transition: 0.4s;
+              &__content {
+                width: 18px;
+                height: 18px;
+                fill: f.$black;
+                @include f.sp {
+                  width: 1.79rem;
+                  height: 1.79rem;
+                }
+              }
+              &:hover {
+                opacity: 0.6;
+              }
+            }
+          }
+          &__copyright {
+            font-size: 0.6875rem;
+            letter-spacing: 0.03rem;
+            line-height: 1.36;
+            margin-left: 25px;
+            @include f.sp {
+              order: 4;
+              font-size: 1.2rem;
+              letter-spacing: 0.05rem;
+              line-height: 1.26;
+              margin-left: 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

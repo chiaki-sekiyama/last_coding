@@ -1,0 +1,115 @@
+@use "./import" as f;
+/* top */
+#top {
+  height: 100vh;
+  height: 100svh;
+  margin-bottom: 130.19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  @include f.sp {
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .main-title {
+    z-index: 1;
+    font-weight: 400;
+    line-height: 1.25;
+    position: relative;
+    @include f.sp {
+      bottom: 32%;
+    }
+    .fade-delay {
+      opacity: 0;
+    }
+    &__en {
+      font-family: "Bodoni Moda", serif;
+      font-size: 7.375rem;
+      letter-spacing: 0.6rem;
+      @include f.sp {
+        font-size: 5.8rem;
+      }
+    }
+    &__ja {
+      font-size: 2rem;
+      letter-spacing: 0.6rem;
+      @include f.sp {
+        font-size: 1.79rem;
+      }
+    }
+  }
+  .top-slider {
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    .img {
+      position: absolute;
+      inset: 0 0 0 0;
+      width: auto;
+      height: 100%;
+      display: none;
+    }
+  }
+  .top-img1 {
+    width: 20%;
+    top: 0;
+    left: 20%;
+    aspect-ratio: 260/240;
+    @include f.sp {
+      top: auto;
+      right: 0;
+      bottom: calc(32% + 13.6rem);
+      width: 12rem;
+      height: 19.2rem;
+      aspect-ratio: 120/192;
+      left: auto;
+    }
+  }
+  .top-img2 {
+    width: 37.92%;
+    bottom: 0;
+    right: 11.15%;
+    aspect-ratio: 493/630;
+    @include f.sp {
+      width: 23rem;
+      left: 0;
+      right: auto;
+      bottom: calc(32% + 17.3rem);
+    }
+  }
+  .top-img3 {
+    width: 39.23%;
+    bottom: -11.23vw;
+    left: 0;
+    aspect-ratio: 510/292;
+    @include f.sp {
+      width: 28.7rem;
+      bottom: calc(32% - 22.8rem);
+    }
+  }
+  .scroll {
+    writing-mode: vertical-rl;
+    position: absolute;
+    inset: auto 23px 0 auto;
+    font-size: 0.75rem;
+    font-family: "Bodoni Moda", serif;
+    letter-spacing: 0.03rem;
+    @include f.sp {
+      font-size: 1.2rem;
+      inset: auto 0.82rem 7.8rem auto;
+    }
+    p {
+      margin-bottom: 60px;
+    }
+    span {
+      display: block;
+      width: 1px;
+      background: #bebebe;
+      margin-right: 10px;
+    }
+  }
+}

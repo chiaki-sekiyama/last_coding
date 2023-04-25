@@ -1,0 +1,303 @@
+@use "./import" as f;
+/* gift */
+.gift {
+  background: f.$bg;
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    margin-left: max(40px,(100% - 1100px)*.5);
+    @include f.sp {
+      display: block;
+      margin-left: 1.5rem;
+    }
+    .sec-title {
+      writing-mode: vertical-rl;
+      margin-right: 50px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      @include f.sp {
+        writing-mode: horizontal-tb;
+        margin-right: 0;
+        margin-bottom: 3rem;
+        &__ja {
+          letter-spacing: 0.21rem;
+          margin-right: 0;
+          margin-top: 0.55rem;
+        }
+      }
+    }
+    .container {
+      padding-right: 40px;
+      background: f.$bg;
+      flex-grow: 1;
+      overflow: hidden;
+      @include f.sp {
+        padding-right: 1.5rem;
+      }
+      .slide-items {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+      }
+    }
+    .item {
+      margin-right: 50px;
+      width: 390px;
+      letter-spacing: 0.035rem;
+      @include f.sp {
+        margin-right: 2rem;
+        width: 19rem;
+        letter-spacing: 0.06rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .link {
+        display: block;
+      }
+      &__img {
+        margin-bottom: 30px;
+        width: 390px;
+        aspect-ratio: 1/1;
+        @include f.sp {
+          margin-bottom: 2rem;
+          width: 19rem;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__menu {
+        font-weight: 500;
+        letter-spacing: 0.04rem;
+        line-height: 1.4;
+        margin-bottom: 9px;
+        @include f.sp {
+          font-size: 1.6rem;
+          line-height: 1.5;
+        }
+      }
+      &__price {
+        font-family: 'Lora', serif;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        margin-bottom: 10px;
+        @include f.sp {
+          font-size: 1.79rem;
+          line-height: 1.25;
+        }
+        .tax {
+          font-family: 'Shippori Mincho', serif;
+          font-size: 0.8125rem;
+          @include f.sp {
+            font-size: 1.37rem;
+            line-height: 1.27;
+          }
+        }
+      }
+      &__comment {
+        font-size: 0.875rem;
+        line-height: 1.72;
+        opacity: 0.6;
+        @include f.sp {
+          display: none;
+        }
+      }
+    }
+    .scroll-ctrl {
+      margin-top: 60px;
+      margin-right: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      @include f.sp {
+        margin-top: 3.5rem;
+        margin-right: 0;
+      }
+      .side-scroll {
+        width: 100%;
+        height: 1px;
+        background-color:rgba(0,0,0,0.08);
+        margin-bottom: 40px;
+        @include f.sp {
+          margin-bottom: 0;
+        }
+      }
+      &__btn {
+        width: 50px;
+        height: 50px;
+        background: none;
+        padding: 0;
+        outline: none;
+        border: 1px solid rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .4s cubic-bezier(.43, .05, .17, 1) 0s;
+        overflow: hidden;
+        @include f.sp {
+          display: none;
+        }
+        &:first-of-type {
+          margin-right: 10px;
+        }
+        .icon__content {
+          width: 18px;
+          height: 18px;
+          stroke: f.$black;
+          z-index: 1;
+          transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+        }
+        &:hover {
+          background-color: f.$red;
+          .icon__content{
+            stroke: f.$white;
+          }
+        }
+      }
+      .link {
+        font-size: 0.8125rem;
+        line-height: 1.62;
+        font-weight: 500;
+        padding-right: 38.98px;
+        position: relative;
+        display: table;
+        margin-left: auto;
+        @include f.sp {
+          font-size: 1.37rem;
+          line-height: 1.53;
+          letter-spacing: 0%;
+          padding-right: 4rem;
+          margin-top: 2.55rem;
+          margin-bottom: 0.94rem;
+        }
+        &::before {
+          content: "";
+          display: block;
+          background: f.$red;
+          z-index: 0;
+          transform: rotate(45deg);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 0;
+          box-sizing: border-box;
+          @include f.sp {
+            width: 2rem;
+            height: 2rem;
+            top: 0.13rem;
+            right: 0.3rem;
+          }
+        }
+        .text {
+          position: relative;
+          overflow: hidden;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: f.$black;
+            transition: all .4s cubic-bezier(.43, .05, .17, 1) 0s;
+          }
+        }
+        .icon {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          z-index: 1;
+          position: absolute;
+          right: 5px;
+          top: 3px;
+          overflow: hidden;
+          @include f.sp {
+            right: 0.79rem;
+            top: 0.45rem;
+          }
+          &__content {
+            width: 12px;
+            height: 12px;
+            display: block;
+            stroke: f.$white;
+            transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
+            @include f.sp {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .giftbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    max-width: 1180px;
+    margin: 80px auto 0 auto;
+    @include f.sp {
+      display: block;
+      padding: 0 1.5rem;
+      max-width: none;
+      margin: 6.5rem 0 0;
+    }
+    &__item {
+      display: flex;
+      width: calc((100% - 40px)/2);
+      background: f.$white;
+      @include f.sp {
+        width: 100%;
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+      .item__img {
+        width: 190px;
+        min-height: 190px;
+        flex-shrink: 0;
+        @include f.sp {
+          width: 11rem;
+          min-height: 11rem;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .text {
+        padding: 30px;
+        box-sizing: border-box;
+        @include f.sp {
+          padding: 1.5rem;
+        }
+        &__title {
+          font-weight: 500;
+          letter-spacing: 0.04rem;
+          margin-bottom: 12px;
+          line-height: 1.5;
+          @include f.sp {
+            font-size: 1.42rem;
+            line-height: 1.48;
+            letter-spacing: 0.06rem;
+            margin-bottom: 0.55rem;
+          }
+        }
+        &__exp {
+          font-size: 0.875rem;
+          letter-spacing: 0.035rem;
+          line-height: 1.72;
+          @include f.sp {
+            font-size: 1.2rem;
+            line-height: 1.68;
+            letter-spacing: 0.06rem;
+          }
+        }
+      }
+    }
+  }
+}
