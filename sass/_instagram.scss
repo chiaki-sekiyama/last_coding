@@ -22,6 +22,11 @@
   .container {
     display: flex;
     overflow: hidden;
+    align-items: center;
+    height: 190px;
+    @include f.sp {
+      height: 16rem;
+    }
     .item {
       display: flex;
       &__img {

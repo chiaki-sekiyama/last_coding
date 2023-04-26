@@ -27,7 +27,7 @@
         }
       }
     }
-    .container {
+    .swiper {
       padding-right: 40px;
       background: f.$bg;
       flex-grow: 1;
@@ -35,7 +35,7 @@
       @include f.sp {
         padding-right: 1.5rem;
       }
-      .slide-items {
+      .swiper-wrapper {
         display: flex;
         width: 100%;
         height: 100%;
@@ -159,13 +159,22 @@
         .side-scroll {
           width: 100%;
           height: 1px;
-          background-color:rgba(0,0,0,0.08);
           margin-bottom: 40px;
+          position: relative;
           @include f.sp {
             margin-bottom: 0;
           }
+          .swiper-scrollbar {
+            &.swiper-scrollbar-horizontal {
+              left: 0%;
+              bottom: 0;
+              height: 1px;
+              width: 100%;
+            }
+          }
         }
         &__btn {
+          position: relative;
           width: 50px;
           height: 50px;
           background: none;
@@ -194,6 +203,21 @@
             background: f.$red;
             .icon__content {
               stroke: f.$white;
+            }
+          }
+          .swiper-button-prev::after, .swiper-button-next::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            margin: auto;
+            top: -3px;
+            left: -11px;
+            right: auto;
+            bottom: auto;
+            @include f.sp {
+              display: none;
             }
           }
         }

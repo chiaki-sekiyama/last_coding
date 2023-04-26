@@ -27,7 +27,7 @@
         }
       }
     }
-    .container {
+    .swiper {
       padding-right: 40px;
       background: f.$bg;
       flex-grow: 1;
@@ -35,7 +35,7 @@
       @include f.sp {
         padding-right: 1.5rem;
       }
-      .slide-items {
+      .swiper-wrapper {
         display: flex;
         width: 100%;
         height: 100%;
@@ -120,22 +120,31 @@
       .side-scroll {
         width: 100%;
         height: 1px;
-        background-color:rgba(0,0,0,0.08);
         margin-bottom: 40px;
+        position: relative;
         @include f.sp {
           margin-bottom: 0;
         }
+        .swiper-scrollbar {
+          &.swiper-scrollbar-horizontal {
+            left: 0%;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+          }
+        }
       }
       &__btn {
+        position: relative;
         width: 50px;
         height: 50px;
         background: none;
         padding: 0;
         outline: none;
-        border: 1px solid rgba(0,0,0,0.1);
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid rgba(0,0,0,0.1);
         transition: background-color .4s cubic-bezier(.43, .05, .17, 1) 0s;
         overflow: hidden;
         @include f.sp {
@@ -144,18 +153,33 @@
         &:first-of-type {
           margin-right: 10px;
         }
+        &:hover {
+          background-color: f.$red;
+          .icon__content{
+            stroke: f.$white;
+          }
+        }
+        .swiper-button-prev::after, .swiper-button-next::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          border: 0;
+          margin: auto;
+          top: -3px;
+          left: -11px;
+          right: auto;
+          bottom: auto;
+          @include f.sp {
+            display: none;
+          }
+        }
         .icon__content {
           width: 18px;
           height: 18px;
           stroke: f.$black;
           z-index: 1;
           transition: stroke .4s cubic-bezier(.43, .05, .17, 1) 0s;
-        }
-        &:hover {
-          background-color: f.$red;
-          .icon__content{
-            stroke: f.$white;
-          }
         }
       }
       .link {

@@ -175,7 +175,7 @@ a:hover {
 }
 
 /* productsで画像が遅れて表示
-最初全部のitemに数字のクラスつけてanimation、animation-delayでやろうとして途方に暮れました、、 */
+全部のitemに数字のクラスつけてanimation、animation-delayでやろうとして途方に暮れました、、 */
 
 .lineup__items.is-select .item {
   transition: opacity .4s cubic-bezier(.43,.05,.17,1) var(--delay);
@@ -206,4 +206,83 @@ a:hover {
   --delay: .25s
 }
 
-/* セクションタイトル版 */
+/* セクションタイトル */
+.sec-title.target .sec-fade-delay {
+  transition: opacity .6s cubic-bezier(.43,.05,.17,1) var(--delay);
+  opacity: 1;
+}
+
+.sec-title .sec-fade-delay:nth-child(1) {
+  --delay: 0s
+}
+.sec-title .sec-fade-delay:nth-child(2) {
+  --delay: .1s
+}
+.sec-title .sec-fade-delay:nth-child(3) {
+  --delay: .2s
+}
+.sec-title .sec-fade-delay:nth-child(4) {
+  --delay: .3s
+}
+.sec-title .sec-fade-delay:nth-child(5) {
+  --delay: .4s
+}
+.sec-title .sec-fade-delay:nth-child(6) {
+  --delay: .5s
+}
+.sec-title .sec-fade-delay:nth-child(7) {
+  --delay: .6s
+}
+.sec-title .sec-fade-delay:nth-child(8) {
+  --delay: .7s
+}
+.sec-title .sec-fade-delay:nth-child(9) {
+  --delay: .8s
+}
+.sec-title .sec-fade-delay:nth-child(10) {
+  --delay: .9s
+}
+.sec-title .sec-fade-delay:nth-child(11) {
+  --delay: 1s
+}
+.sec-title .sec-fade-delay:nth-child(12) {
+  --delay: 1.1s
+}
+.sec-title .sec-fade-delay:nth-child(13) {
+  --delay: 1.2s
+}
+.sec-title .sec-fade-delay:nth-child(14) {
+  --delay: 1.3s
+}
+.sec-title .sec-fade-delay:nth-child(15) {
+  --delay: 1.4s
+}
+.sec-title .sec-fade-delay:nth-child(16) {
+  --delay: 1.5s
+}
+.sec-title .sec-fade-delay:nth-child(17) {
+  --delay: 1.6s
+}
+.sec-title .sec-fade-delay:nth-child(18) {
+  --delay: 1.7s
+}
+.sec-title .sec-fade-delay:nth-child(19) {
+  --delay: 1.8s
+}
+.sec-title .sec-fade-delay:nth-child(20) {
+  --delay: 1.9s
+}
+
+/* インスタグラム回転ずし */
+.insta-slider .slideshow {
+  animation: loop-slide 50s infinite linear 0s both;
+}
+
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

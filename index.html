@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -288,9 +291,9 @@
             <span class="sec-fade-delay">ギ</span><span class="sec-fade-delay">フ</span><span class="sec-fade-delay">ト</span><span class="sec-fade-delay">に</span><span class="sec-fade-delay">お</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">す</span><span class="sec-fade-delay">め</span>
           </p>
         </h2>
-        <div class="container">
-          <div class="slide-items">
-            <div class="item">
+        <div class="swiper" id="gift-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide item">
               <a class="link" href="#">
                 <div class="item__img">
                   <img src="./image/products_pack_don_syouga.png" alt="牛丼の具（５個）と生姜焼き丼の具（５個）のセット">
@@ -306,7 +309,7 @@
                 </div>
               </a>
             </div>
-            <div class="item">
+            <div class="swiper-slide item">
               <a class="link" href="#">
                 <div class="item__img">
                   <img src="./image/products_sukiyaki.png" alt="和牛すき焼き肉セット（700グラム）">
@@ -322,7 +325,7 @@
                 </div>
               </a>
             </div>
-            <div class="item">
+            <div class="swiper-slide item">
               <a class="link" href="#">
                 <div class="item__img">
                   <img src="./image/products_pack_don_nikomi_yaki.png" alt="牛丼の具(４個)と煮込みハンバーグ(３個)と焼きハンバーグ（3個）の詰め合わせ">
@@ -338,7 +341,7 @@
                 </div>
               </a>
             </div>
-            <div class="item">
+            <div class="swiper-slide item">
               <a class="link" href="#">
                 <div class="item__img">
                   <img src="./image/products_pack_don_nikomi.png" alt="牛丼の具(5個)と煮込みハンバーグ(5個)の詰め合わせ">
@@ -356,7 +359,7 @@
                 </div>
               </a>
             </div>
-            <div class="item">
+            <div class="swiper-slide item">
               <a class="link" href="#">
                 <div class="item__img">
                   <img src="./image/products_roast_soboro.png" alt="手作り和牛ローストビーフ(300グラム×２本)と和牛そぼろのセット（200グラム）">
@@ -375,13 +378,15 @@
           </div>
 
           <div class="scroll-ctrl">
-            <!--横スクロールのバーいるよ～～-->
-            <div class="side-scroll"></div>
-            <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
+            <div class="side-scroll">
+              <div class="swiper-scrollbar"></div>
+            </div>
             <button id="prev" class="scroll-ctrl__btn">
+              <div class="swiper-button-prev"></div>
               <svg viewBox="0 0 22 22" class="icon__content arw-l"><use xlink:href="#icon__arrow__l"></use></svg>
             </button>
             <button id="next" class="scroll-ctrl__btn">
+              <div class="swiper-button-next"></div>
               <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
             </button>
             <a href="#" class="link line-r">
@@ -1293,9 +1298,9 @@
             <span class="sec-fade-delay">お</span><span class="sec-fade-delay">客</span><span class="sec-fade-delay">様</span><span class="sec-fade-delay">の</span><span class="sec-fade-delay">声</span>
           </p>
         </h2>
-        <div class="container">
-          <div class="slide-items">
-            <div class="item">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice1.png" alt="定期的に食べたくなるハンバーグ">
               </div>
@@ -1314,7 +1319,7 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice2.png" alt="自宅用に購入">
               </div>
@@ -1336,7 +1341,7 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice3.png" alt="自分へのご褒美に">
               </div>
@@ -1355,7 +1360,7 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice4.png" alt="友達とのBBQ用に購入">
               </div>
@@ -1374,7 +1379,7 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice5.png" alt="いつもお世話になっている友人へ">
               </div>
@@ -1393,7 +1398,7 @@
               </div>
             </div>
 
-            <div class="item">
+            <div class="swiper-slide item">
               <div class="item__img">
                 <img src="./image/voice6.png" alt="義実家への御中元として購入">
               </div>
@@ -1414,13 +1419,15 @@
           </div>
 
           <div class="scroll-ctrl">
-            <!--横スクロールのバーいるよ～～-->
-            <div class="side-scroll"></div>
-            <!--矢印で前後に移動、アイテム分終わったら、ボタン薄くなる-->
+            <div class="side-scroll">
+              <div class="swiper-scrollbar"></div>
+            </div>
             <button id="prev" class="scroll-ctrl__btn">
+              <div class="swiper-button-prev"></div>
               <svg viewBox="0 0 22 22" class="icon__content arw-l"><use xlink:href="#icon__arrow__l"></use></svg>
             </button>
             <button id="next" class="scroll-ctrl__btn">
+              <div class="swiper-button-next"></div>
               <svg viewBox="0 0 22 22" class="icon__content arw-r"><use xlink:href="#icon__arrow__r"></use></svg>
             </button>
           </div>
@@ -1559,70 +1566,70 @@
     <section id="instagram" class="instagram section-area b-white-img">
       <h2 class="sec-title">Instagram</h2>
       <div class="container insta-slider">
-        <div class="item">
-          <div class="item__img">
+        <ul class="item slideshow">
+          <li class="item__img">
             <img src="./image/instagram1.png" alt="か">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram2.png" alt="い">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram3.png" alt="て">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram4.png" alt="ん">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram5.png" alt="や">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram6.png" alt="き">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram7.png" alt="に">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram8.png" alt="く">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram9.png" alt="だ">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram10.png" alt="びっくり">
-          </div>
-        </div>
-        <div class="item">
-          <div class="item__img">
+          </li>
+        </ul>
+        <ul class="item slideshow">
+          <li class="item__img">
             <img src="./image/instagram1.png" alt="か">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram2.png" alt="い">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram3.png" alt="て">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram4.png" alt="ん">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram5.png" alt="や">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram6.png" alt="き">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram7.png" alt="に">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram8.png" alt="く">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram9.png" alt="だ">
-          </div>
-          <div class="item__img">
+          </li>
+          <li class="item__img">
             <img src="./image/instagram10.png" alt="びっくり">
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div class="instagram__bottom bottom-link">
         <a class="link line-r" href="#">
@@ -1748,7 +1755,8 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/swiper.js"></script>
   <script src="./js/app.js"></script>
 </body>
 </html>
