@@ -7,7 +7,7 @@ $(function() {
   });
   /* トップ画像スライダー */
   $('.top-img1').each(function() {
-    var $slides = $(this).find('img'),
+    let $slides = $(this).find('img'),
     slideCount = $slides.length,
     currentIndex = 0;
 
@@ -15,14 +15,14 @@ $(function() {
     setInterval(showNextSlide, 4000);
 
     function showNextSlide() {
-      var nextIndex = (currentIndex + 1) % slideCount;
+      let nextIndex = (currentIndex + 1) % slideCount;
       $slides.eq(currentIndex).fadeOut();
       $slides.eq(nextIndex).fadeIn();
       currentIndex = nextIndex;
     }
   });
   $('.top-img2').each(function() {
-    var $slides = $(this).find('img'),
+    let $slides = $(this).find('img'),
     slideCount = $slides.length,
     currentIndex = 0;
 
@@ -30,14 +30,14 @@ $(function() {
     setInterval(showNextSlide, 4000);
 
     function showNextSlide() {
-      var nextIndex = (currentIndex + 1) % slideCount;
+      let nextIndex = (currentIndex + 1) % slideCount;
       $slides.eq(currentIndex).fadeOut();
       $slides.eq(nextIndex).fadeIn();
       currentIndex = nextIndex;
     }
   });
   $('.top-img3').each(function() {
-    var $slides = $(this).find('img'),
+    let $slides = $(this).find('img'),
     slideCount = $slides.length,
     currentIndex = 0;
 
@@ -45,7 +45,7 @@ $(function() {
     setInterval(showNextSlide, 4000);
 
     function showNextSlide() {
-      var nextIndex = (currentIndex + 1) % slideCount;
+      let nextIndex = (currentIndex + 1) % slideCount;
       $slides.eq(currentIndex).fadeOut();
       $slides.eq(nextIndex).fadeIn();
       currentIndex = nextIndex;
@@ -53,7 +53,7 @@ $(function() {
   });
   /* productsタブメニュー */
   $('.p-btn').on('click', function() {
-    let index = $('.p-btn').index(this);
+    const index = $('.p-btn').index(this);
 
     $('.p-btn').removeClass('is-select');
     $(this).addClass('is-select');
@@ -77,7 +77,7 @@ for (let i = 0; i < letters.length; i++) {
   const option = {
     duration: 600,
     delay: i * 100,
-    fill: 'forwards',
+    fill: 'forwards'
   };
   letters[i].animate(keyframes, option);
 }
