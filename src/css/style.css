@@ -40,6 +40,16 @@ body {
   overflow-y: scroll;
 }
 
+::-moz-selection {
+  color: #ffffff;
+  background-color: #911010;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #911010;
+}
+
 .sec-title {
   font-weight: 400;
 }

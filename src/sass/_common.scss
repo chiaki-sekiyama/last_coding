@@ -38,6 +38,11 @@ body {
   overflow-y: scroll;
 }
 
+::selection {
+  color: f.$white;
+  background-color: f.$red;
+}
+
 .sec-title {
   font-weight: 400;
   .sec-fade-delay {

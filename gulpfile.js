@@ -16,7 +16,7 @@ gulp.task('default', function () {
       cascade: false
     })
   ]))
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('src/css'));
   });
 });
 
