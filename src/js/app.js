@@ -38,6 +38,13 @@ $(function() {
   $('.faq-btn').on('click', function() {
     $(this).toggleClass('is-open', 200);
   });
+  /* トップに戻る */
+  $('#to-top').on('click', function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  });
 });
 
 /* 順番に表示 */
@@ -76,12 +83,4 @@ const fadeObserver = new IntersectionObserver(fadeLetter, option);
 const fadeElements = document.querySelectorAll('.sec-title');
 fadeElements.forEach((fadeElement) => {
   fadeObserver.observe(fadeElement);
-});
-
-/* トップに戻る */
-$('#to-top').click(function () {
-  $('body,html').animate({
-      scrollTop: 0
-  }, 500);
-  return false;
 });
