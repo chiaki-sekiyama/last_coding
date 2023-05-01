@@ -5,8 +5,8 @@ const postcss = require('gulp-postcss');
 const webserver = require('gulp-webserver');
 
 gulp.task('default', function () {
-  return gulp.watch('sass/**/*.scss', function () {
-  return gulp.src('sass/**/*.scss')
+  return gulp.watch('src/sass/**/*.scss', function () {
+  return gulp.src('src/sass/**/*.scss')
   .pipe(sass({
   outputStyle: 'expanded'
   })
@@ -21,7 +21,7 @@ gulp.task('default', function () {
 });
 
 gulp.task('webserver', function() {
-  return gulp.src('./index.html')
+  return gulp.src('src')
   .pipe(webserver({
     host:'localhost',
     port: 8000,

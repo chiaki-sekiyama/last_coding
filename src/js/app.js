@@ -6,50 +6,24 @@ $(function() {
     $(this).parents('.header').toggleClass('nav-open');
   });
   /* トップ画像スライダー */
-  $('.top-img1').each(function() {
-    let $slides = $(this).find('img'),
-    slideCount = $slides.length,
-    currentIndex = 0;
-
+  $('.top-slider').each(function() {
+    const $slides = $(this).find('img');
+    const slideCount = $slides.length;
+    let currentIndex = 0;
     $slides.eq(currentIndex).fadeIn();
-    setInterval(showNextSlide, 4000);
 
     function showNextSlide() {
-      let nextIndex = (currentIndex + 1) % slideCount;
+      const nextIndex = (currentIndex + 1) % slideCount;
       $slides.eq(currentIndex).fadeOut();
       $slides.eq(nextIndex).fadeIn();
-      currentIndex = nextIndex;
+      return nextIndex;
     }
-  });
-  $('.top-img2').each(function() {
-    let $slides = $(this).find('img'),
-    slideCount = $slides.length,
-    currentIndex = 0;
-
-    $slides.eq(currentIndex).fadeIn();
-    setInterval(showNextSlide, 4000);
-
-    function showNextSlide() {
-      let nextIndex = (currentIndex + 1) % slideCount;
-      $slides.eq(currentIndex).fadeOut();
-      $slides.eq(nextIndex).fadeIn();
-      currentIndex = nextIndex;
+    function slideShow() {
+      setInterval(() => {
+        currentIndex = showNextSlide();
+      }, 4000);
     }
-  });
-  $('.top-img3').each(function() {
-    let $slides = $(this).find('img'),
-    slideCount = $slides.length,
-    currentIndex = 0;
-
-    $slides.eq(currentIndex).fadeIn();
-    setInterval(showNextSlide, 4000);
-
-    function showNextSlide() {
-      let nextIndex = (currentIndex + 1) % slideCount;
-      $slides.eq(currentIndex).fadeOut();
-      $slides.eq(nextIndex).fadeIn();
-      currentIndex = nextIndex;
-    }
+    slideShow($slides);
   });
   /* productsタブメニュー */
   $('.p-btn').on('click', function() {
