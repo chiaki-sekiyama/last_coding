@@ -6,23 +6,26 @@ $(function() {
     $(this).parents('.header').toggleClass('nav-open');
   });
   /* トップ画像スライダー */
-  $('.top-slider').each(function() {
-    const $slides = $(this).find('img');
+  function showNextSlide($slides) {
+    const nextIndex = (slideShow().currentIndex + 1) % slideShow().slideCount;
+    $slides.eq(slideShow().currentIndex).fadeOut();
+    $slides.eq(nextIndex).fadeIn();
+    return nextIndex;
+  };
+  function slideShow($slides) {
     const slideCount = $slides.length;
     let currentIndex = 0;
     $slides.eq(currentIndex).fadeIn();
-
-    function showNextSlide() {
-      const nextIndex = (currentIndex + 1) % slideCount;
-      $slides.eq(currentIndex).fadeOut();
-      $slides.eq(nextIndex).fadeIn();
-      return nextIndex;
-    }
-    function slideShow() {
-      setInterval(() => {
-        currentIndex = showNextSlide();
-      }, 4000);
-    }
+    setInterval(() => {
+      currentIndex = showNextSlide();
+    }, 4000);
+    return {
+      currentIndex,
+      slideCount,
+    };
+  };
+  $('.top-slider').each(function() {
+    const $slides = $(this).find('img');
     slideShow($slides);
   });
   /* productsタブメニュー */
